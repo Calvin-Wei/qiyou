@@ -25,27 +25,17 @@ public final class R {
         public static final int dot_focused=0x7f020000;
         public static final int dot_normal=0x7f020001;
         public static final int ic_launcher=0x7f020002;
-        public static final int img01=0x7f020003;
-        public static final int img02=0x7f020004;
-        public static final int img03=0x7f020005;
-        public static final int img04=0x7f020006;
-        public static final int img05=0x7f020007;
-        public static final int img06=0x7f020008;
-        public static final int img07=0x7f020009;
-        public static final int img08=0x7f02000a;
-        public static final int img09=0x7f02000b;
-        public static final int img10=0x7f02000c;
-        public static final int img11=0x7f02000d;
-        public static final int img12=0x7f02000e;
-        public static final int viewpager_bottom_bg=0x7f02000f;
+        public static final int image01=0x7f020003;
+        public static final int image02=0x7f020004;
+        public static final int image03=0x7f020005;
+        public static final int viewpager_bottom_bg=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f080005;
+        public static final int action_settings=0x7f080004;
         public static final int adgallery=0x7f080002;
-        public static final int adgallerytxt=0x7f080003;
         public static final int guanggao=0x7f080001;
         public static final int llayout=0x7f080000;
-        public static final int ovalLayout=0x7f080004;
+        public static final int ovalLayout=0x7f080003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

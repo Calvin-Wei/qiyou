@@ -56,12 +56,8 @@ public class MyPagerGalleryView extends Gallery implements
 	private int mNormalId;
 	// 图片资源ID组
 	private int[] mAdsId;
-	// 图片网络路径数组
-	private String[] mUris;
 	// ImageView组
 	private List<ImageView> listImgs;
-	// 广告条上面的textView控件
-	private TextView adgallerytxt;
 	// 广告条上的文字数组
 	private String[] txtViewpager;
 
@@ -98,17 +94,15 @@ public class MyPagerGalleryView extends Gallery implements
 	 * @param txtViewpager
 	 *            广告条上的每一条文字的数组
 	 */
-	public void start(Context context, String[] mris, int[] adsId,
+	public void start(Context context, int[] adsId,
 			int switchTime, LinearLayout ovalLayout, int focusedId,
-			int normalId, TextView adgallerytxt, String[] txtViewpager) {
+			int normalId,  String[] txtViewpager) {
 		this.mContext = context;
-		this.mUris = mris;
 		this.mAdsId = adsId;
 		this.mSwitchTime = switchTime;
 		this.mOvalLayout = ovalLayout;
 		this.mFocusedId = focusedId;
 		this.mNormalId = normalId;
-		this.adgallerytxt = adgallerytxt;
 		this.txtViewpager = txtViewpager;
 
 		initImages();// 初始化广告栏图片组
@@ -134,27 +128,27 @@ public class MyPagerGalleryView extends Gallery implements
 	 */
 	private void initImages() {
 		listImgs = new ArrayList<ImageView>();// ImageView组件图片组
-		int len = mUris != null ? mUris.length : mAdsId.length;// 是否加载网络路径图片组
+		int len =  mAdsId.length;// 是否加载网络路径图片组
 		for (int i = 0; i < len; i++) {
 			ImageView imageView = new ImageView(mContext);
 			imageView.setScaleType(ImageView.ScaleType.FIT_XY);// 缩放格式--将图片不暗比例扩大缩小，到当前view中显示
 			imageView.setLayoutParams(new Gallery.LayoutParams(
 					Gallery.LayoutParams.MATCH_PARENT,
 					Gallery.LayoutParams.MATCH_PARENT));// 设置ImageView组件的大小
-			if (mUris == null) {// 本地加载图片
+//			if (mUris == null) {// 本地加载图片
 				imageView.setImageResource(mAdsId[i]);// 为ImageView设置要显示的图片
-			} else {
-				/**
-				 * android Afinal开源框架中的FinalBitmap组件,
-				 * imageView加载bitmap时无需考虑bitmap加载过程中的oom(内存溢出)
-				 * 和android容器快速滑动时候出现的图片错位等现象,FinalBitmap可以配置线程加载数量，
-				 * 缓存大小，缓存路径，加载显示动画等.FinalBitmap可以自定义下载器，用来扩展其他协议显示网络图片
-				 * 也可以自定义birmap显示器,在ImageView显示图片的时候播放动画等(默认是渐变动画显示).
-				 */
-				FinalBitmap.create(mContext)
-						.display(imageView, mUris[i], imageView.getWidth(),
-								imageView.getHeight(), null, null);
-			}
+//			} else {
+//				/**
+//				 * android Afinal开源框架中的FinalBitmap组件,
+//				 * imageView加载bitmap时无需考虑bitmap加载过程中的oom(内存溢出)
+//				 * 和android容器快速滑动时候出现的图片错位等现象,FinalBitmap可以配置线程加载数量，
+//				 * 缓存大小，缓存路径，加载显示动画等.FinalBitmap可以自定义下载器，用来扩展其他协议显示网络图片
+//				 * 也可以自定义birmap显示器,在ImageView显示图片的时候播放动画等(默认是渐变动画显示).
+//				 */
+//				FinalBitmap.create(mContext)
+//						.display(imageView, mUris[i], imageView.getWidth(),
+//								imageView.getHeight(), null, null);
+//			}
 			listImgs.add(imageView);// 向ImageView组添加
 		}
 	}
@@ -169,9 +163,9 @@ public class MyPagerGalleryView extends Gallery implements
 		} else if (mOvalLayout != null) {
 			mOvalLayout.removeAllViews();
 			// 设置圆点的大小(也可是是圆点窗口的其他值0.7可更改)
-			int Ovalheight = (int) (mOvalLayout.getLayoutParams().height * 0.7);
+			int Ovalheight = (int) (mOvalLayout.getLayoutParams().height * 0.8);
 			// 设置圆点的左右外边距(也可更改)
-			int Ovalmargin = (int) (mOvalLayout.getLayoutParams().height * 0.2);
+			int Ovalmargin = (int) (mOvalLayout.getLayoutParams().height * 0.3);
 			android.widget.LinearLayout.LayoutParams layoutParams = new android.widget.LinearLayout.LayoutParams(
 					Ovalheight, Ovalheight);
 			layoutParams.setMargins(Ovalmargin, 0, Ovalmargin, 0);
@@ -264,7 +258,6 @@ public class MyPagerGalleryView extends Gallery implements
 			mOvalLayout.getChildAt(oldIndex).setBackgroundResource(mNormalId);// 圆点取消
 			mOvalLayout.getChildAt(curIndex).setBackgroundResource(mFocusedId);// 圆点选中
 			int page = curIndex + 1;// 当前是第几个图片
-			adgallerytxt.setText("" + page);
 			oldIndex = curIndex;
 		}
 	}

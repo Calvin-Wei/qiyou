@@ -26,18 +26,16 @@ public class MainActivity extends Activity {
 	private MyPagerGalleryView gallery;
 	// 圆点容器
 	private LinearLayout ovalLayout;
-	// 图片上的文字
-	private TextView adgallerytxt;
 	/**
 	 * 本地图片数组
 	 */
-	private int[] imageId = new int[] { R.drawable.img03, R.drawable.img01,
-			R.drawable.img02 };
-
-	private String[] urlImageList = {
-			"http://www.android-doc.com/assets/images/dac_logo.png",
-			"http://avatar.csdn.net/D/E/4/1_banketree.jpg",
-			"http://avatar.csdn.net/blogpic/20141203172156234.jpg", };
+	private int[] imageId = new int[] { R.drawable.image03, R.drawable.image01,
+			R.drawable.image02 };
+	// 当前先加载本地图片
+	// private String[] urlImageList = {
+	// "http://www.android-doc.com/assets/images/dac_logo.png",
+	// "http://avatar.csdn.net/D/E/4/1_banketree.jpg",
+	// "http://avatar.csdn.net/blogpic/20141203172156234.jpg", };
 	private String[] txtViewpager = { "1111111111111111111111111111111111",
 			"2222222222222222222222222222222222",
 			"3333333333333333333333333333333333",
@@ -59,10 +57,8 @@ public class MainActivity extends Activity {
 		FinalBitmap.create(this);
 		gallery = (MyPagerGalleryView) findViewById(R.id.adgallery);
 		ovalLayout = (LinearLayout) findViewById(R.id.ovalLayout);// 圆点组件
-		adgallerytxt = (TextView) findViewById(R.id.adgallerytxt);
-		gallery.start(this, null, imageId, 3000, ovalLayout,
-				R.drawable.dot_focused, R.drawable.dot_normal, adgallerytxt,
-				txtViewpager);
+		gallery.start(this, imageId, 3000, ovalLayout, R.drawable.dot_focused,
+				R.drawable.dot_normal, txtViewpager);
 		/**
 		 * 点击事件监听
 		 */
@@ -109,15 +105,14 @@ public class MainActivity extends Activity {
 	 * 如果网络开启中 加载网络数据
 	 */
 	private void doIsConnected() {
-		gallery.start(getApplicationContext(), urlImageList, imageId, 3000,
-				ovalLayout, R.drawable.dot_focused, R.drawable.dot_normal,
-				adgallerytxt, txtViewpager);
+		gallery.start(getApplicationContext(), imageId, 3000, ovalLayout,
+				R.drawable.dot_focused, R.drawable.dot_normal, txtViewpager);
 		// 添加组件单击事件的监听
 		gallery.setMyOnItemClickListener(new MyOnItemClickListener() {
 
 			public void onItemClick(int curIndex) {
-				Toast.makeText(MainActivity.this, "点击的图片下标为:" + curIndex,
-						Toast.LENGTH_SHORT).show();
+				// Toast.makeText(MainActivity.this, "点击的图片下标为:" + curIndex,
+				// Toast.LENGTH_SHORT).show();
 			}
 		});
 	}
