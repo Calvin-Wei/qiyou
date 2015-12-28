@@ -1,16 +1,144 @@
 package com.qiyou.main;
 
+import net.tsz.afinal.FinalBitmap;
+
+import com.qiyou.ggl.network.NetUtils;
+import com.qiyou.ggl.view.MyPagerGalleryView;
+import com.qiyou.ggl.view.MyPagerGalleryView.MyOnItemClickListener;
+
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	// 广告栏控件
+	private MyPagerGalleryView gallery;
+	// 圆点容器
+	private LinearLayout ovalLayout;
+	// 图片上的文字
+	private TextView adgallerytxt;
+	/**
+	 * 本地图片数组
+	 */
+	private int[] imageId = new int[] { R.drawable.img03, R.drawable.img01,
+			R.drawable.img02 };
+
+	private String[] urlImageList = {
+			"http://www.android-doc.com/assets/images/dac_logo.png",
+			"http://avatar.csdn.net/D/E/4/1_banketree.jpg",
+			"http://avatar.csdn.net/blogpic/20141203172156234.jpg", };
+	private String[] txtViewpager = { "1111111111111111111111111111111111",
+			"2222222222222222222222222222222222",
+			"3333333333333333333333333333333333",
+			"4444444444444444444444444444444444" };
+
+	/**
+	 * 网络监听
+	 */
+	NetReceiver mReceiver = new NetReceiver();
+	IntentFilter mFilter = new IntentFilter();
+
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		/**
+		 * android开源框架，这里用于加载网络图片
+		 */
+		FinalBitmap.create(this);
+		gallery = (MyPagerGalleryView) findViewById(R.id.adgallery);
+		ovalLayout = (LinearLayout) findViewById(R.id.ovalLayout);// 圆点组件
+		adgallerytxt = (TextView) findViewById(R.id.adgallerytxt);
+		gallery.start(this, null, imageId, 3000, ovalLayout,
+				R.drawable.dot_focused, R.drawable.dot_normal, adgallerytxt,
+				txtViewpager);
+		/**
+		 * 点击事件监听
+		 */
+		gallery.setMyOnItemClickListener(new MyOnItemClickListener() {
+
+			public void onItemClick(int curIndex) {
+				Toast.makeText(MainActivity.this, "点击图片为:" + curIndex,
+						Toast.LENGTH_SHORT).show();
+			}
+		});
+		// 注册监听网络状态的广播
+		mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+		registerReceiver(mReceiver, mFilter);
+	}
+
+	/**
+	 * 
+	 * @齐游
+	 * @2015-12-27
+	 * @author 谞臣 ，监听当前网络状态
+	 */
+	public class NetReceiver extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			String action = intent.getAction();
+			if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
+				boolean isConnected = NetUtils.isNetworkConnected(context);
+				Log.e("网络状态：", "" + isConnected);
+				Log.e("wifi状态：", "" + NetUtils.isWifiConnected(context));
+				Log.e("移动网络状态：", "" + NetUtils.isMobileConnected(context));
+				Log.e("网络连接类型：", "" + NetUtils.getConnectedType(context));
+				if (isConnected) {
+					Toast.makeText(context, "已经连接网络", Toast.LENGTH_LONG).show();
+					doIsConnected();
+				} else {
+					Toast.makeText(context, "已经断开网络", Toast.LENGTH_LONG).show();
+				}
+			}
+		}
+	}
+
+	/**
+	 * 如果网络开启中 加载网络数据
+	 */
+	private void doIsConnected() {
+		gallery.start(getApplicationContext(), urlImageList, imageId, 3000,
+				ovalLayout, R.drawable.dot_focused, R.drawable.dot_normal,
+				adgallerytxt, txtViewpager);
+		// 添加组件单击事件的监听
+		gallery.setMyOnItemClickListener(new MyOnItemClickListener() {
+
+			public void onItemClick(int curIndex) {
+				Toast.makeText(MainActivity.this, "点击的图片下标为:" + curIndex,
+						Toast.LENGTH_SHORT).show();
+			}
+		});
+	}
+
+	@Override
+	protected void onDestroy() {
+		// 取消注册广播接收器
+		unregisterReceiver(mReceiver);
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onStop() {
+		gallery.stopTimer();
+		super.onStop();
+	}
+
+	@Override
+	protected void onRestart() {
+		gallery.startTimer();
+		super.onRestart();
 	}
 
 	@Override
