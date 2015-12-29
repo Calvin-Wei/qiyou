@@ -1,6 +1,5 @@
 package com.qiyou.main;
 
-import net.tsz.afinal.FinalBitmap;
 
 import com.qiyou.ggl.network.NetUtils;
 import com.qiyou.ggl.view.MyPagerGalleryView;
@@ -54,7 +53,7 @@ public class MainActivity extends Activity {
 		/**
 		 * android开源框架，这里用于加载网络图片
 		 */
-		FinalBitmap.create(this);
+//		FinalBitmap.create(this);
 		gallery = (MyPagerGalleryView) findViewById(R.id.adgallery);
 		ovalLayout = (LinearLayout) findViewById(R.id.ovalLayout);// 圆点组件
 		gallery.start(this, imageId, 3000, ovalLayout, R.drawable.dot_focused,

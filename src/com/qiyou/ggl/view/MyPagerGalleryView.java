@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import net.tsz.afinal.FinalBitmap;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
