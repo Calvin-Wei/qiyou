@@ -15,6 +15,6 @@
         android:gravity="center"
         android:text="立即体验"
         android:textColor="@android:color/white"
-        android:textSize="22sp" />
+        android:textSize="@dimen/guide_textSize" />
 
 </RelativeLayout>

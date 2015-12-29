@@ -22,7 +22,7 @@
                 <com.qiyou.ggl.view.MyPagerGalleryView
                     android:id="@+id/adgallery"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="@dimen/gallery_height"
                     android:background="#FFFFFF"
                     android:focusable="true"
                     android:focusableInTouchMode="true" />
@@ -30,7 +30,7 @@
                 <LinearLayout
                     android:id="@+id/ovalLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="10dp"
+                    android:layout_height="@dimen/gg_oval_height"
                     android:layout_gravity="bottom"
                     android:background="#00FFFFFF"
                     android:gravity="center_horizontal"
