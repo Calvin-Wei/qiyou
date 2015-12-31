@@ -6,6 +6,8 @@
     android:background="#FFFFFF"
     android:orientation="vertical" >
 
+    <include layout="@layout/activity_search_bar" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent" >

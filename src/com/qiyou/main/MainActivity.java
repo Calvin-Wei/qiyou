@@ -12,14 +12,14 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
 	// 广告栏控件
 	private MyPagerGalleryView gallery;
@@ -31,10 +31,6 @@ public class MainActivity extends Activity {
 	private int[] imageId = new int[] { R.drawable.image03, R.drawable.image01,
 			R.drawable.image02 };
 	// 当前先加载本地图片
-	// private String[] urlImageList = {
-	// "http://www.android-doc.com/assets/images/dac_logo.png",
-	// "http://avatar.csdn.net/D/E/4/1_banketree.jpg",
-	// "http://avatar.csdn.net/blogpic/20141203172156234.jpg", };
 	private String[] txtViewpager = { "1111111111111111111111111111111111",
 			"2222222222222222222222222222222222",
 			"3333333333333333333333333333333333",
