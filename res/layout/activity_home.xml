@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tabhost"
+    android:id="@android:id/tabhost"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -27,33 +27,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_gravity="bottom"
-                android:background="@color/silver"
+                android:background="@drawable/title_bg"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
                 <RadioButton
                     android:id="@+id/home_tab_main"
                     style="@style/home_tab_bottom"
-                    android:background="@color/silver"
                     android:checked="true"
                     android:drawableTop="@drawable/home_tab_main_selector" />
 
                 <RadioButton
-                    android:id="@+id/home_tab_search"
+                    android:id="@+id/home_tab_feel"
                     style="@style/home_tab_bottom"
-                    android:background="@color/silver"
-                    android:drawableTop="@drawable/home_tab_search_selector" />
+                    android:drawableTop="@drawable/home_tab_feel_selector" />
 
                 <RadioButton
                     android:id="@+id/home_tab_plan"
                     style="@style/home_tab_bottom"
-                    android:background="@color/silver"
                     android:drawableTop="@drawable/icon_plan" />
 
                 <RadioButton
                     android:id="@+id/home_tab_personal"
                     style="@style/home_tab_bottom"
-                    android:background="@color/silver"
                     android:drawableTop="@drawable/home_tab_personal_selector" />
             </RadioGroup>
     </LinearLayout>

@@ -4,8 +4,9 @@
 package com.qiyou.launcherGuide;
 
 import com.qiyou.lanucherGuide.utils.AnimationUtil;
-import com.qiyou.main.MainActivity;
-import com.qiyou.main.R;
+import com.qiyou.R;
+import com.qiyou.ui.view.HomeActivity;
+import com.qiyou.ui.view.MainActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +35,7 @@ public class Fragment4 extends Fragment {
 
 					public void onClick(View v) {
 						startActivity(new Intent(getActivity(),
-								MainActivity.class));
+								HomeActivity.class));
 						AnimationUtil.finishActivityAnimation(getActivity());
 					}
 				});

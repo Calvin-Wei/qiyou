@@ -3,7 +3,7 @@
  */
 package com.qiyou.lanucherGuide.utils;
 
-import com.qiyou.main.R;
+import com.qiyou.R;
 
 import android.app.Activity;
 import android.content.Context;

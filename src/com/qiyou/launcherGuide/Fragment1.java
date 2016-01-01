@@ -3,7 +3,7 @@
  */
 package com.qiyou.launcherGuide;
 
-import com.qiyou.main.R;
+import com.qiyou.R;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

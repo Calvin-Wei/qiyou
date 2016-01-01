@@ -6,7 +6,9 @@ package com.qiyou.launcherGuide;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.qiyou.main.R;
+import com.qiyou.R;
+
+
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
