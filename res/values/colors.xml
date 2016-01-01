@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="silver">#E6E8FA</color>
+    <color name="bg_White">#FFFFFF</color>
+    <color name="bg_Gray_light">#EEEEEE</color>
+    <color name="bg_Gray">#CCCCCC</color>
+    <color name="tv_Black">#000000</color>
+
 </resources>
