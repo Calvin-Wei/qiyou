@@ -74,21 +74,19 @@ public final class R {
         public static final int main_bottom_tab_home_normal=0x7f020021;
         public static final int main_bottom_tab_personal_focus=0x7f020022;
         public static final int main_bottom_tab_personal_normal=0x7f020023;
-        public static final int main_bottom_tab_search_focus=0x7f020024;
-        public static final int main_bottom_tab_search_normal=0x7f020025;
-        public static final int no_image=0x7f020026;
-        public static final int search_box=0x7f020027;
-        public static final int title_bg=0x7f020028;
-        public static final int top_search=0x7f020029;
-        public static final int user_10=0x7f02002a;
-        public static final int user_2=0x7f02002b;
-        public static final int user_8=0x7f02002c;
-        public static final int user_9=0x7f02002d;
-        public static final int viewpager_bottom_bg=0x7f02002e;
-        public static final int voice=0x7f02002f;
+        public static final int no_image=0x7f020024;
+        public static final int search_box=0x7f020025;
+        public static final int title_bg=0x7f020026;
+        public static final int top_search=0x7f020027;
+        public static final int user_10=0x7f020028;
+        public static final int user_2=0x7f020029;
+        public static final int user_8=0x7f02002a;
+        public static final int user_9=0x7f02002b;
+        public static final int viewpager_bottom_bg=0x7f02002c;
+        public static final int voice=0x7f02002d;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0017;
+        public static final int action_settings=0x7f0a0018;
         public static final int adgallery=0x7f0a0007;
         public static final int city_selector=0x7f0a0014;
         public static final int gridView_user=0x7f0a000b;
@@ -99,10 +97,11 @@ public final class R {
         public static final int home_tab_personal=0x7f0a0004;
         public static final int home_tab_plan=0x7f0a0003;
         public static final int imageView1=0x7f0a0009;
+        public static final int iv_adapter_grid_pic=0x7f0a0016;
+        public static final int ll_user_hotel=0x7f0a000d;
         public static final int ll_user_life=0x7f0a000c;
         public static final int ll_user_members=0x7f0a000e;
         public static final int ll_user_opinion=0x7f0a000f;
-        public static final int ll_user_store=0x7f0a000d;
         public static final int llayout=0x7f0a0005;
         public static final int ovalLayout=0x7f0a0008;
         public static final int search_button=0x7f0a0013;
@@ -110,7 +109,7 @@ public final class R {
         public static final int search_top_layout=0x7f0a0010;
         public static final int search_top_logo=0x7f0a0011;
         public static final int textView1=0x7f0a000a;
-        public static final int tvInNew=0x7f0a0016;
+        public static final int tvInNew=0x7f0a0017;
         public static final int vp_activity=0x7f0a0015;
     }
     public static final class layout {
@@ -121,10 +120,11 @@ public final class R {
         public static final int activity_plan=0x7f030004;
         public static final int activity_search_bar=0x7f030005;
         public static final int activity_viewpager=0x7f030006;
-        public static final int fragment_1=0x7f030007;
-        public static final int fragment_2=0x7f030008;
-        public static final int fragment_3=0x7f030009;
-        public static final int fragment_4=0x7f03000a;
+        public static final int adapter_gridview_home=0x7f030007;
+        public static final int fragment_1=0x7f030008;
+        public static final int fragment_2=0x7f030009;
+        public static final int fragment_3=0x7f03000a;
+        public static final int fragment_4=0x7f03000b;
     }
     public static final class menu {
         public static final int main=0x7f090000;

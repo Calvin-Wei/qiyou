@@ -44,21 +44,6 @@
                         android:textColor="@color/bg_White" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/imageView1"
-                        android:layout_alignLeft="@+id/textView1"
-                        android:layout_below="@+id/textView1"
-                        android:src="@drawable/user_2" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/imageView1"
-                        android:layout_toRightOf="@+id/textView1"
-                        android:src="@drawable/user_2" />
-
-                    <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_alignParentRight="true"
@@ -131,8 +116,6 @@
                         android:layout_marginBottom="7dp"
                         android:layout_marginTop="7dp"
                         android:background="@color/bg_White" />
-
-                    
                 </LinearLayout>
             </LinearLayout>
 
@@ -175,7 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/bg_Gray" />
-            
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -211,7 +194,7 @@
                 android:layout_height="1dp"
                 android:background="@color/bg_Gray" />
 
-            <com.qiyou.ui.MyGridView
+            <com.qiyou.ui.view.MyGridView
                 android:id="@+id/gridView_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -219,7 +202,7 @@
                 android:numColumns="5"
                 android:paddingBottom="8dp"
                 android:paddingTop="10dp" >
-            </com.qiyou.ui.MyGridView>
+            </com.qiyou.ui.view.MyGridView>
 
             <View
                 android:layout_width="match_parent"
@@ -278,6 +261,12 @@
                     android:text="景点优惠劵"
                     android:textColor="@color/tv_Black" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="暂无可用优惠卷" />
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -291,7 +280,7 @@
                 android:background="@color/bg_Gray" />
 
             <LinearLayout
-                android:id="@+id/ll_user_store"
+                android:id="@+id/ll_user_hotel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
