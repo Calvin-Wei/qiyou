@@ -128,6 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:id="@+id/my_team_manage"
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" >
@@ -162,6 +163,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/my_ticket"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
@@ -172,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:text="我的行程管理"
+                    android:text="我的门票管理"
                     android:textColor="@color/tv_Black"
                     android:textSize="17sp" />
 
@@ -239,7 +241,7 @@
                 android:background="@color/bg_Gray" />
 
             <LinearLayout
-                android:id="@+id/ll_user_life"
+                android:id="@+id/ll_user_jingdian"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
