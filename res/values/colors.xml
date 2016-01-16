@@ -7,5 +7,8 @@
     <color name="bg_Gray">#CCCCCC</color>
     <color name="tv_Black">#000000</color>
     <color name="sky_background">#228FC1</color>
+    <color name="saffron">#F1B136</color>
+    <color name="eggplant">#03A679</color>
+    <color name="sienna">#EB6460</color>
 
 </resources>

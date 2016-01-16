@@ -20,6 +20,9 @@ public final class R {
         public static final int bg_Gray=0x7f050003;
         public static final int bg_Gray_light=0x7f050002;
         public static final int bg_White=0x7f050001;
+        public static final int eggplant=0x7f050007;
+        public static final int saffron=0x7f050006;
+        public static final int sienna=0x7f050008;
         public static final int silver=0x7f050000;
         public static final int sky_background=0x7f050005;
         public static final int tv_Black=0x7f050004;
@@ -92,9 +95,9 @@ public final class R {
         public static final int voice=0x7f020032;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a001c;
+        public static final int action_settings=0x7f0a001e;
         public static final int adgallery=0x7f0a0007;
-        public static final int city_selector=0x7f0a0017;
+        public static final int city_selector=0x7f0a0018;
         public static final int gridView_user=0x7f0a000d;
         public static final int guanggao=0x7f0a0006;
         public static final int home_radio_button_group=0x7f0a0000;
@@ -103,8 +106,9 @@ public final class R {
         public static final int home_tab_personal=0x7f0a0004;
         public static final int home_tab_plan=0x7f0a0003;
         public static final int imageView1=0x7f0a0009;
-        public static final int iv_adapter_grid_pic=0x7f0a0019;
-        public static final int iv_option_back=0x7f0a001b;
+        public static final int iv_adapter_grid_pic=0x7f0a001a;
+        public static final int iv_option_back=0x7f0a001d;
+        public static final int list_view=0x7f0a0013;
         public static final int ll_user_hotel=0x7f0a000f;
         public static final int ll_user_jingdian=0x7f0a000e;
         public static final int ll_user_members=0x7f0a0010;
@@ -114,13 +118,14 @@ public final class R {
         public static final int my_ticket=0x7f0a000c;
         public static final int ovalLayout=0x7f0a0008;
         public static final int pull_to_refresh=0x7f0a0012;
-        public static final int search_button=0x7f0a0016;
-        public static final int search_edit=0x7f0a0015;
-        public static final int search_top_layout=0x7f0a0013;
-        public static final int search_top_logo=0x7f0a0014;
+        public static final int search_button=0x7f0a0017;
+        public static final int search_edit=0x7f0a0016;
+        public static final int search_top_layout=0x7f0a0014;
+        public static final int search_top_logo=0x7f0a0015;
         public static final int textView1=0x7f0a000a;
-        public static final int tvInNew=0x7f0a001a;
-        public static final int vp_activity=0x7f0a0018;
+        public static final int text_view_name=0x7f0a001c;
+        public static final int tvInNew=0x7f0a001b;
+        public static final int vp_activity=0x7f0a0019;
     }
     public static final class layout {
         public static final int activity_feel=0x7f030000;
@@ -136,7 +141,8 @@ public final class R {
         public static final int fragment_2=0x7f03000a;
         public static final int fragment_3=0x7f03000b;
         public static final int fragment_4=0x7f03000c;
-        public static final int my_team_manage=0x7f03000d;
+        public static final int list_item=0x7f03000d;
+        public static final int my_team_manage=0x7f03000e;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -146,6 +152,12 @@ public final class R {
         public static final int app_name=0x7f070000;
         public static final int hello_world=0x7f070001;
         public static final int hint_searchText=0x7f070003;
+        public static final int jet_refresh_style=0x7f070005;
+        public static final int polite_message=0x7f070006;
+        public static final int sun_refresh_style=0x7f070004;
+        public static final int trip_to_india=0x7f070007;
+        public static final int trip_to_indonesia=0x7f070009;
+        public static final int trip_to_italy=0x7f070008;
     }
     public static final class style {
         /** 

@@ -4,5 +4,12 @@
     <string name="app_name">齐游</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-	<string name="hint_searchText">春节出游享受1折旅行</string>
+    <string name="hint_searchText">春节出游享受1折旅行</string>
+    <string name="sun_refresh_style">Sun refresh style</string>
+    <string name="jet_refresh_style">Jet refresh style</string>
+    <string name="polite_message">Wait a moment please. Breathe deeply and watch beautiful animation.</string>
+    <string name="trip_to_india">Trip to India</string>
+    <string name="trip_to_italy">Trip to Italy</string>
+    <string name="trip_to_indonesia">Trip to Indonesia</string>
+
 </resources>

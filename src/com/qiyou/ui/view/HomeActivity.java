@@ -4,6 +4,7 @@
 package com.qiyou.ui.view;
 
 import com.qiyou.R;
+import com.qiyou.refresh.view.PullToRefreshActivity;
 import com.qiyou.util.AppManager;
 
 import android.app.Activity;
@@ -29,7 +30,7 @@ public class HomeActivity extends TabActivity {
 	 * 
 	 */
 	public static final String TAB_MAIN = "MAIN_ACTIVITY";
-	public static final String TAB_FEEL = "FEEL_ACTIVITY";
+	public static final String TAB_FEEL = "PullToRefresh_ACTIVITY";
 	public static final String TAB_PLAN = "PLAN_ACTIVITY";
 	public static final String TAB_USER = "USER_ACTIVITY";
 
@@ -49,7 +50,7 @@ public class HomeActivity extends TabActivity {
 		mTabHost = getTabHost();
 		Intent i_main = new Intent(this, MainActivity.class);
 		Intent i_plan = new Intent(this, PlanActivity.class);
-		Intent i_found = new Intent(this, FeelActivity.class);
+		Intent i_found = new Intent(this, PullToRefreshActivity.class);
 		Intent i_personal = new Intent(this, UserActivity.class);
 		mTabHost.addTab(mTabHost.newTabSpec(TAB_MAIN).setIndicator(TAB_MAIN)
 				.setContent(i_main));
