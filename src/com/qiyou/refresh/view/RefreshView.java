@@ -183,6 +183,9 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 		invalidateSelf();
 	}
 
+	/**
+	 * 无效的视图 绘图的时候需要重绘(在这一点应该无效 )
+	 */
 	public void invalidateDrawable(Drawable who) {
 		final Callback callback = getCallback();
 		if (callback != null) {
@@ -190,6 +193,9 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 		}
 	}
 
+	/**
+	 * 安排哪个Drawable对象来调用哪一个线程来执行多少时间
+	 */
 	public void scheduleDrawable(Drawable who, Runnable what, long when) {
 		final Callback callback = getCallback();
 		if (callback != null) {
@@ -197,6 +203,9 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 		}
 	}
 
+	/**
+	 * 不安排哪个Drawable对象做什么
+	 */
 	public void unscheduleDrawable(Drawable who, Runnable what) {
 		final Callback callback = getCallback();
 		if (callback != null) {
@@ -217,18 +226,15 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 	public void draw(Canvas canvas) {
 		final int saveCount = canvas.save();
 
-		// DRAW BACKGROUND.
 		canvas.drawColor(mContext.getResources().getColor(
 				R.color.sky_background));
 
 		if (isRefreshing) {
-			// Set up new set of wind
 			while (mWinds.size() < WIND_SET_AMOUNT) {
 				float y = (float) (mParent.getTotalDragDistance() / (Math
 						.random() * RANDOM_Y_COEFFICIENT));
 				float x = random(MIN_WIND_X_OFFSET, MAX_WIND_X_OFFSET);
 
-				// Magic with checking interval between winds
 				if (mWinds.size() > 1) {
 					y = 0;
 					while (y == 0) {
@@ -236,8 +242,6 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 								.random() * RANDOM_Y_COEFFICIENT));
 
 						for (Map.Entry<Float, Float> wind : mWinds.entrySet()) {
-							// We want that interval will be greater than fifth
-							// part of draggable distance
 							if (Math.abs(wind.getKey() - tmp) > mParent
 									.getTotalDragDistance()
 									/ RANDOM_Y_COEFFICIENT) {
@@ -254,14 +258,12 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 				drawWind(canvas, y, x);
 			}
 
-			// Draw current set of wind
 			if (mWinds.size() >= WIND_SET_AMOUNT) {
 				for (Map.Entry<Float, Float> wind : mWinds.entrySet()) {
 					drawWind(canvas, wind.getKey(), wind.getValue());
 				}
 			}
 
-			// We should to create new set of winds
 			if (mInverseDirection && mNewWindSet) {
 				mWinds.clear();
 				mNewWindSet = false;
@@ -269,7 +271,6 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 						MAX_WIND_LINE_WIDTH);
 			}
 
-			// needed for checking direction
 			mLastAnimationTime = mLoadingAnimationTime;
 		}
 
@@ -308,18 +309,21 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 		canvas.drawLine(x, y, xEnd, y, mWindPaint);
 	}
 
+	/**
+	 * 绘制边缘的云彩
+	 * 
+	 * @param canvas
+	 */
 	private void drawSideClouds(Canvas canvas) {
 		Matrix matrixLeftClouds = mMatrix;
 		Matrix matrixRightClouds = mAdditionalMatrix;
 		matrixLeftClouds.reset();
 		matrixRightClouds.reset();
 
-		// Drag percent will newer get more then 1 here
 		float dragPercent = Math.min(1f, Math.abs(mPercent));
 
 		boolean overdrag = false;
 
-		// But we check here for overdrag
 		if (mPercent > 1.0f) {
 			overdrag = true;
 		}
@@ -336,12 +340,9 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 			scale = SIDE_CLOUDS_INITIAL_SCALE;
 		}
 
-		// Current y position of clouds
 		float dragYOffset = mParent.getTotalDragDistance()
 				* (1.0f - dragPercent);
 
-		// Position where clouds fully visible on screen and we should drag them
-		// with content of listView
 		int cloudsVisiblePosition = mParent.getTotalDragDistance() / 2
 				- mLeftCloudsHeightCenter;
 
@@ -398,6 +399,11 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 		canvas.drawBitmap(mRightClouds, matrixRightClouds, null);
 	}
 
+	/**
+	 * 绘制中间的云彩
+	 * 
+	 * @param canvas
+	 */
 	private void drawCenterClouds(Canvas canvas) {
 		Matrix matrix = mMatrix;
 		matrix.reset();
@@ -425,9 +431,7 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 
 		float parallaxPercent = 0;
 		boolean parallax = false;
-		// Current y position of clouds
 		float dragYOffset = mParent.getTotalDragDistance() * dragPercent;
-		// Position when should start parallax scrolling
 		int startParallaxHeight = mParent.getTotalDragDistance()
 				- mFrontCloudHeightCenter;
 
@@ -479,7 +483,6 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 		float dragPercent = mPercent;
 		float rotateAngle = 0;
 
-		// Check overdrag
 		if (dragPercent > 1.0f && !mEndOfRefreshing) {
 			rotateAngle = (dragPercent % 1) * 10;
 			dragPercent = 1.0f;

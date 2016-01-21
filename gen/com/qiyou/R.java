@@ -10,9 +10,11 @@ package com.qiyou;
 public final class R {
     public static final class anim {
         public static final int close=0x7f040000;
-        public static final int show=0x7f040001;
-        public static final int zoom_enter=0x7f040002;
-        public static final int zoom_exit=0x7f040003;
+        public static final int down_in=0x7f040001;
+        public static final int show=0x7f040002;
+        public static final int up_out=0x7f040003;
+        public static final int zoom_enter=0x7f040004;
+        public static final int zoom_exit=0x7f040005;
     }
     public static final class attr {
     }
@@ -20,12 +22,15 @@ public final class R {
         public static final int bg_Gray=0x7f050003;
         public static final int bg_Gray_light=0x7f050002;
         public static final int bg_White=0x7f050001;
-        public static final int eggplant=0x7f050007;
-        public static final int saffron=0x7f050006;
-        public static final int sienna=0x7f050008;
+        public static final int eggplant=0x7f050008;
+        public static final int saffron=0x7f050007;
+        public static final int sienna=0x7f050009;
         public static final int silver=0x7f050000;
-        public static final int sky_background=0x7f050005;
-        public static final int tv_Black=0x7f050004;
+        public static final int sky_background=0x7f050006;
+        public static final int text_border=0x7f050004;
+        public static final int tv_Black=0x7f050005;
+        public static final int tv_Red=0x7f05000a;
+        public static final int tv_white=0x7f05000b;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -42,62 +47,71 @@ public final class R {
         public static final int guide_textSize=0x7f060002;
     }
     public static final class drawable {
-        public static final int airplane=0x7f020000;
-        public static final int android_layout_bg=0x7f020001;
-        public static final int arrow_expend_right=0x7f020002;
-        public static final int btn_innew=0x7f020003;
-        public static final int clouds_center=0x7f020004;
-        public static final int clouds_left=0x7f020005;
-        public static final int clouds_right=0x7f020006;
-        public static final int dot_focused=0x7f020007;
-        public static final int dot_normal=0x7f020008;
-        public static final int guide_1=0x7f020009;
-        public static final int guide_2=0x7f02000a;
-        public static final int guide_3=0x7f02000b;
-        public static final int guide_4=0x7f02000c;
-        public static final int home_tab_feel_selector=0x7f02000d;
-        public static final int home_tab_main_selector=0x7f02000e;
-        public static final int home_tab_personal_selector=0x7f02000f;
-        public static final int ic_feel_focus=0x7f020010;
-        public static final int ic_feel_normal=0x7f020011;
-        public static final int ic_launcher=0x7f020012;
-        public static final int icon_around=0x7f020013;
-        public static final int icon_gonglv=0x7f020014;
-        public static final int icon_head=0x7f020015;
-        public static final int icon_home_search=0x7f020016;
-        public static final int icon_hotel=0x7f020017;
-        public static final int icon_jingdian=0x7f020018;
-        public static final int icon_logo=0x7f020019;
-        public static final int icon_plan=0x7f02001a;
-        public static final int icon_plane=0x7f02001b;
-        public static final int icon_scan=0x7f02001c;
-        public static final int icon_ticket=0x7f02001d;
-        public static final int icon_together=0x7f02001e;
-        public static final int icon_train=0x7f02001f;
-        public static final int image01=0x7f020020;
-        public static final int image02=0x7f020021;
-        public static final int image03=0x7f020022;
-        public static final int logo=0x7f020023;
-        public static final int main_bottom_tab_home_focus=0x7f020024;
-        public static final int main_bottom_tab_home_normal=0x7f020025;
-        public static final int main_bottom_tab_personal_focus=0x7f020026;
-        public static final int main_bottom_tab_personal_normal=0x7f020027;
-        public static final int no_image=0x7f020028;
-        public static final int search_box=0x7f020029;
-        public static final int tb_icon_actionbar_back=0x7f02002a;
-        public static final int title_bg=0x7f02002b;
-        public static final int top_search=0x7f02002c;
-        public static final int user_10=0x7f02002d;
-        public static final int user_2=0x7f02002e;
-        public static final int user_8=0x7f02002f;
-        public static final int user_9=0x7f020030;
-        public static final int viewpager_bottom_bg=0x7f020031;
-        public static final int voice=0x7f020032;
+        public static final int abc_ic_clear_disabled=0x7f020000;
+        public static final int abc_ic_clear_search_api_holo_light=0x7f020001;
+        public static final int airplane=0x7f020002;
+        public static final int android_layout_bg=0x7f020003;
+        public static final int arrow_expend_right=0x7f020004;
+        public static final int bg_edit_ware=0x7f020005;
+        public static final int btn_innew=0x7f020006;
+        public static final int clouds_center=0x7f020007;
+        public static final int clouds_left=0x7f020008;
+        public static final int clouds_right=0x7f020009;
+        public static final int detail_show=0x7f02000a;
+        public static final int dot_focused=0x7f02000b;
+        public static final int dot_normal=0x7f02000c;
+        public static final int guide_1=0x7f02000d;
+        public static final int guide_2=0x7f02000e;
+        public static final int guide_3=0x7f02000f;
+        public static final int guide_4=0x7f020010;
+        public static final int home_tab_feel_selector=0x7f020011;
+        public static final int home_tab_main_selector=0x7f020012;
+        public static final int home_tab_personal_selector=0x7f020013;
+        public static final int ic_feel_focus=0x7f020014;
+        public static final int ic_feel_normal=0x7f020015;
+        public static final int ic_launcher=0x7f020016;
+        public static final int icon_around=0x7f020017;
+        public static final int icon_gonglv=0x7f020018;
+        public static final int icon_head=0x7f020019;
+        public static final int icon_home_search=0x7f02001a;
+        public static final int icon_hotel=0x7f02001b;
+        public static final int icon_jingdian=0x7f02001c;
+        public static final int icon_logo=0x7f02001d;
+        public static final int icon_plan=0x7f02001e;
+        public static final int icon_plane=0x7f02001f;
+        public static final int icon_scan=0x7f020020;
+        public static final int icon_ticket=0x7f020021;
+        public static final int icon_together=0x7f020022;
+        public static final int icon_train=0x7f020023;
+        public static final int image01=0x7f020024;
+        public static final int image02=0x7f020025;
+        public static final int image03=0x7f020026;
+        public static final int logo=0x7f020027;
+        public static final int main_bottom_tab_home_focus=0x7f020028;
+        public static final int main_bottom_tab_home_normal=0x7f020029;
+        public static final int main_bottom_tab_personal_focus=0x7f02002a;
+        public static final int main_bottom_tab_personal_normal=0x7f02002b;
+        public static final int no_image=0x7f02002c;
+        public static final int search_box=0x7f02002d;
+        public static final int tb_icon_actionbar_back=0x7f02002e;
+        public static final int tb_icon_actionbar_more=0x7f02002f;
+        public static final int title_bg=0x7f020030;
+        public static final int top_search=0x7f020031;
+        public static final int user_10=0x7f020032;
+        public static final int user_2=0x7f020033;
+        public static final int user_8=0x7f020034;
+        public static final int user_9=0x7f020035;
+        public static final int viewpager_bottom_bg=0x7f020036;
+        public static final int voice=0x7f020037;
+        public static final int xlistview_arrow=0x7f020038;
+        public static final int yuanjiao=0x7f020039;
+        public static final int yuanjiao_red=0x7f02003a;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a001e;
+        public static final int action_settings=0x7f0a0035;
         public static final int adgallery=0x7f0a0007;
         public static final int city_selector=0x7f0a0018;
+        public static final int ed_Searchware=0x7f0a002b;
         public static final int gridView_user=0x7f0a000d;
         public static final int guanggao=0x7f0a0006;
         public static final int home_radio_button_group=0x7f0a0000;
@@ -107,8 +121,12 @@ public final class R {
         public static final int home_tab_plan=0x7f0a0003;
         public static final int imageView1=0x7f0a0009;
         public static final int iv_adapter_grid_pic=0x7f0a001a;
-        public static final int iv_option_back=0x7f0a001d;
+        public static final int iv_adapter_list_pic=0x7f0a001b;
+        public static final int iv_back=0x7f0a002a;
+        public static final int iv_option_back=0x7f0a0027;
+        public static final int listView_text=0x7f0a0028;
         public static final int list_view=0x7f0a0013;
+        public static final int ll_choice=0x7f0a0029;
         public static final int ll_user_hotel=0x7f0a000f;
         public static final int ll_user_jingdian=0x7f0a000e;
         public static final int ll_user_members=0x7f0a0010;
@@ -116,16 +134,34 @@ public final class R {
         public static final int llayout=0x7f0a0005;
         public static final int my_team_manage=0x7f0a000b;
         public static final int my_ticket=0x7f0a000c;
+        public static final int name=0x7f0a001c;
         public static final int ovalLayout=0x7f0a0008;
+        public static final int pop_MeiLanFang_park=0x7f0a0021;
+        public static final int pop_del=0x7f0a001f;
+        public static final int pop_ok=0x7f0a0024;
+        public static final int price=0x7f0a001d;
         public static final int pull_to_refresh=0x7f0a0012;
+        public static final int sale_num=0x7f0a001e;
         public static final int search_button=0x7f0a0017;
         public static final int search_edit=0x7f0a0016;
         public static final int search_top_layout=0x7f0a0014;
         public static final int search_top_logo=0x7f0a0015;
+        public static final int spot_name=0x7f0a0020;
+        public static final int spot_time=0x7f0a0022;
+        public static final int spot_trans_info=0x7f0a0023;
         public static final int textView1=0x7f0a000a;
-        public static final int text_view_name=0x7f0a001c;
-        public static final int tvInNew=0x7f0a001b;
+        public static final int text_view_name=0x7f0a0026;
+        public static final int tvInNew=0x7f0a0025;
         public static final int vp_activity=0x7f0a0019;
+        public static final int xlistview_footer_content=0x7f0a002c;
+        public static final int xlistview_footer_hint_textview=0x7f0a002d;
+        public static final int xlistview_footer_progressbar=0x7f0a002e;
+        public static final int xlistview_header_arrow=0x7f0a0033;
+        public static final int xlistview_header_content=0x7f0a002f;
+        public static final int xlistview_header_hint_textview=0x7f0a0031;
+        public static final int xlistview_header_progressbar=0x7f0a0034;
+        public static final int xlistview_header_text=0x7f0a0030;
+        public static final int xlistview_header_time=0x7f0a0032;
     }
     public static final class layout {
         public static final int activity_feel=0x7f030000;
@@ -137,27 +173,47 @@ public final class R {
         public static final int activity_search_bar=0x7f030006;
         public static final int activity_viewpager=0x7f030007;
         public static final int adapter_gridview_home=0x7f030008;
-        public static final int fragment_1=0x7f030009;
-        public static final int fragment_2=0x7f03000a;
-        public static final int fragment_3=0x7f03000b;
-        public static final int fragment_4=0x7f03000c;
-        public static final int list_item=0x7f03000d;
-        public static final int my_team_manage=0x7f03000e;
+        public static final int adapter_listview_text=0x7f030009;
+        public static final int adapter_popwindow=0x7f03000a;
+        public static final int fragment_1=0x7f03000b;
+        public static final int fragment_2=0x7f03000c;
+        public static final int fragment_3=0x7f03000d;
+        public static final int fragment_4=0x7f03000e;
+        public static final int list_item=0x7f03000f;
+        public static final int my_team_manage=0x7f030010;
+        public static final int search_text=0x7f030011;
+        public static final int xlistview_footer=0x7f030012;
+        public static final int xlistview_header=0x7f030013;
     }
     public static final class menu {
         public static final int main=0x7f090000;
     }
     public static final class string {
         public static final int action_settings=0x7f070002;
+        public static final int adapter_cost_buy=0x7f070010;
         public static final int app_name=0x7f070000;
         public static final int hello_world=0x7f070001;
         public static final int hint_searchText=0x7f070003;
         public static final int jet_refresh_style=0x7f070005;
         public static final int polite_message=0x7f070006;
+        public static final int spot_introduction=0x7f070011;
+        public static final int spot_name=0x7f070012;
+        public static final int spot_open=0x7f070016;
+        public static final int spot_open_time=0x7f070015;
+        public static final int spot_show=0x7f070013;
+        public static final int spot_showname=0x7f070014;
+        public static final int spot_trans=0x7f070017;
+        public static final int spot_trans_info=0x7f070018;
         public static final int sun_refresh_style=0x7f070004;
         public static final int trip_to_india=0x7f070007;
         public static final int trip_to_indonesia=0x7f070009;
         public static final int trip_to_italy=0x7f070008;
+        public static final int xlistview_footer_hint_normal=0x7f07000b;
+        public static final int xlistview_footer_hint_ready=0x7f07000a;
+        public static final int xlistview_header_hint_loading=0x7f07000f;
+        public static final int xlistview_header_hint_normal=0x7f07000c;
+        public static final int xlistview_header_hint_ready=0x7f07000e;
+        public static final int xlistview_header_last_time=0x7f07000d;
     }
     public static final class style {
         /** 

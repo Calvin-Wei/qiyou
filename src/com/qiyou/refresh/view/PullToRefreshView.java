@@ -24,7 +24,7 @@ import android.widget.ImageView;
  * @齐游
  * @2016-1-4
  * @author 谞臣
- * 
+ * @see 刷新界面
  */
 public class PullToRefreshView extends ViewGroup {
 
@@ -115,6 +115,9 @@ public class PullToRefreshView extends ViewGroup {
 		}
 	}
 
+	/**
+	 * 触摸操作的拦截 就是对各种触摸操作的一些处理
+	 */
 	public boolean onInterceptTouchEvent(@NonNull MotionEvent ev) {
 
 		if (!isEnabled() || canChildScrollUp() || mRefreshing) {
@@ -160,6 +163,9 @@ public class PullToRefreshView extends ViewGroup {
 		return mIsBeingDragged;
 	}
 
+	/**
+	 * 
+	 */
 	public boolean onTouchEvent(@NonNull MotionEvent ev) {
 
 		if (!mIsBeingDragged) {

@@ -1,11 +1,9 @@
 package com.qiyou.ui.view;
 
-
 import com.qiyou.R;
 import com.qiyou.ggl.network.NetUtils;
 import com.qiyou.ggl.view.MyPagerGalleryView;
 import com.qiyou.ggl.view.MyPagerGalleryView.MyOnItemClickListener;
-
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -18,7 +16,10 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity {
@@ -38,6 +39,9 @@ public class MainActivity extends FragmentActivity {
 			"3333333333333333333333333333333333",
 			"4444444444444444444444444444444444" };
 
+	// 搜索文本框
+	private TextView search_edit;
+
 	/**
 	 * 网络监听
 	 */
@@ -48,10 +52,23 @@ public class MainActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		search_edit = (TextView) findViewById(R.id.search_edit);
+
+		search_edit.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// 点击搜索框进入搜索框
+				Intent intent = new Intent(MainActivity.this,
+						SearchTextActivity.class);
+				startActivity(intent);
+			}
+		});
+
 		/**
 		 * android开源框架，这里用于加载网络图片
 		 */
-//		FinalBitmap.create(this);
+		// FinalBitmap.create(this);
 		gallery = (MyPagerGalleryView) findViewById(R.id.adgallery);
 		ovalLayout = (LinearLayout) findViewById(R.id.ovalLayout);// 圆点组件
 		gallery.start(this, imageId, 3000, ovalLayout, R.drawable.dot_focused,

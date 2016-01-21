@@ -11,5 +11,19 @@
     <string name="trip_to_india">Trip to India</string>
     <string name="trip_to_italy">Trip to Italy</string>
     <string name="trip_to_indonesia">Trip to Indonesia</string>
-
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_last_time">上次更新时间:</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="adapter_cost_buy">$899    已有1.2万人购买</string>
+    <string name="spot_introduction">梅园坐落在泰州市区东郊、有着美丽传说的凤凰墩上。梅兰芳公园中有“四绝”最值得一看。梅亭为园中一绝；二绝为梅兰芳大型半身汉白玉雕像；陈列厅外水池中间的梅兰芳，在《太真外传》中饰演的杨太真大型汉白玉的艺术形象亦称得上第三绝；第四绝则为一座巨型石碑，上书赵朴初先生来泰时所作《踏莎行》词一首。</string>
+	<string name="spot_name">梅兰芳公园</string>
+	<string name="spot_show">景点简介</string>
+	<string name="spot_showname">景点名称</string>
+	<string name="spot_open_time">景点开放时间</string>
+	<string name="spot_open">8: 00～17: 30</string>
+	<string name="spot_trans">景点交通</string>
+	<string name="spot_trans_info">迎春东路90号。乘7、10、19、22、36路车可达。</string>
 </resources>

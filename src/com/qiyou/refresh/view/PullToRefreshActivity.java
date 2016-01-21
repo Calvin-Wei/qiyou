@@ -71,6 +71,9 @@ public class PullToRefreshActivity extends Activity {
 				});
 	}
 
+	/**
+	 * 适配器 可修改 聊天记录的适配器(发表心得体会)
+	 */
 	class SampleAdapter extends ArrayAdapter<Map<String, Integer>> {
 
 		public static final String KEY_NAME = "name";
