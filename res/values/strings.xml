@@ -18,12 +18,23 @@
     <string name="xlistview_header_hint_ready">松开刷新数据</string>
     <string name="xlistview_header_hint_loading">正在加载...</string>
     <string name="adapter_cost_buy">$899    已有1.2万人购买</string>
+    <string name="adapter_content">常州是长江文明和吴文化的发源地之一，也是南朝齐梁故里。[3]  常州境内风景名胜、历史古迹较多，有中华恐龙园、嬉戏谷、春秋淹城等主题公园和天目湖、南山、太湖湾等自然风景区。</string>
+    <string name="adapter_time">2016-1-1 旅游时间</string>
+    <string name="spot_cost">$899</string>
+    <string name="spot_buy">已有1.2万人购买</string>
+    <string name="spot_place">常州</string>
     <string name="spot_introduction">梅园坐落在泰州市区东郊、有着美丽传说的凤凰墩上。梅兰芳公园中有“四绝”最值得一看。梅亭为园中一绝；二绝为梅兰芳大型半身汉白玉雕像；陈列厅外水池中间的梅兰芳，在《太真外传》中饰演的杨太真大型汉白玉的艺术形象亦称得上第三绝；第四绝则为一座巨型石碑，上书赵朴初先生来泰时所作《踏莎行》词一首。</string>
-	<string name="spot_name">梅兰芳公园</string>
-	<string name="spot_show">景点简介</string>
-	<string name="spot_showname">景点名称</string>
-	<string name="spot_open_time">景点开放时间</string>
-	<string name="spot_open">8: 00～17: 30</string>
-	<string name="spot_trans">景点交通</string>
-	<string name="spot_trans_info">迎春东路90号。乘7、10、19、22、36路车可达。</string>
+    <string name="spot_name">梅兰芳公园</string>
+    <string name="spot_show">景点简介</string>
+    <string name="spot_evaluate">景点评价</string>
+    <string name="spot_showname">景点名称</string>
+    <string name="spot_open_time">景点开放时间</string>
+    <string name="spot_detail">景点详情</string>
+    <string name="spot_open">8: 00～17: 30</string>
+    <string name="spot_trans">景点交通</string>
+    <string name="spot_trans_info">迎春东路90号。乘7、10、19、22、36路车可达。</string>
+    <string name="buy_num">购买数量</string>
+    <string name="buy_reduce">-</string>
+    <string name="buy_add">+</string>
+
 </resources>

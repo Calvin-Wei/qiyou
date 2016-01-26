@@ -3,8 +3,10 @@
  */
 package com.qiyou.ui.view;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 
 import com.qiyou.R;
@@ -30,6 +32,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 /**
@@ -65,7 +68,7 @@ public class SearchTextActivity extends Activity implements OnTouchListener,
 		setContentView(R.layout.search_text);
 		initView();
 		// 请求网络数据
-		new WareTask().execute();
+		new SearchTask().execute();
 	}
 
 	private void initView() {
@@ -90,11 +93,11 @@ public class SearchTextActivity extends Activity implements OnTouchListener,
 
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
-		//事件的y坐标
+		// 事件的y坐标
 		float y = event.getY();
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
-			//第一次按下时的坐标
+			// 第一次按下时的坐标
 			fist_down_Y = y;
 			break;
 		case MotionEvent.ACTION_MOVE:
@@ -103,7 +106,8 @@ public class SearchTextActivity extends Activity implements OnTouchListener,
 				if (animationSet != null) {
 					animationSet = null;
 				}
-				animationSet = (AnimationSet) AnimationUtils.loadAnimation(this, R.anim.up_out);
+				animationSet = (AnimationSet) AnimationUtils.loadAnimation(
+						this, R.anim.up_out);
 				ll_search.startAnimation(animationSet);
 				ll_search.setY(-100);
 				ll_search.setVisibility(View.GONE);
@@ -113,7 +117,8 @@ public class SearchTextActivity extends Activity implements OnTouchListener,
 				if (animationSet != null) {
 					animationSet = null;
 				}
-				animationSet = (AnimationSet) AnimationUtils.loadAnimation(this, R.anim.down_in);
+				animationSet = (AnimationSet) AnimationUtils.loadAnimation(
+						this, R.anim.down_in);
 				ll_search.startAnimation(animationSet);
 				ll_search.setY(0);
 				ll_search.setVisibility(View.VISIBLE);
@@ -124,18 +129,19 @@ public class SearchTextActivity extends Activity implements OnTouchListener,
 		return false;
 	}
 
-private class WareTask extends AsyncTask<Void, Void, HashMap<String, Object>> {
-		
-		ProgressDialog dialog=null;
+	private class SearchTask extends
+			AsyncTask<Void, Void, HashMap<String, Object>> {
+
+		ProgressDialog dialog = null;
 
 		@Override
 		protected void onPreExecute() {
-			if (dialog==null) {
-				dialog=ProgressDialog.show(SearchTextActivity.this, "","正在加载...");
+			if (dialog == null) {
+				dialog = ProgressDialog.show(SearchTextActivity.this, "",
+						"正在加载...");
 				dialog.show();
 			}
-			
-			
+
 		}
 
 		@Override
@@ -144,52 +150,62 @@ private class WareTask extends AsyncTask<Void, Void, HashMap<String, Object>> {
 			if (pageIndex == 0) {
 				url = "http://192.168.0.111:3000/taoBaoQuery";
 			} else {
-				url = "http://192.168.0.111:3000/taoBaoQuery?pageIndex=" + pageIndex;
+				url = "http://192.168.0.111:3000/taoBaoQuery?pageIndex="
+						+ pageIndex;
 			}
-			//请求数据，返回json
+			// 请求数据，返回json
 			String json = GetHttp.RequstGetHttp(url);
-			//第一层的数组类型字段
+			// 第一层的数组类型字段
 			String[] LIST1_field = { "data" };
-			
-			//第二层的对象类型字段
-			String[] STR2_field = { "id", "name", "price", "sale_num", "address", "pic" };
+
+			// 第二层的对象类型字段
+			String[] STR2_field = { "id", "name", "price", "sale_num",
+					"address", "pic" };
 			ArrayList<String[]> aL_STR2_field = new ArrayList<String[]>();
-			//第二层的对象类型字段放入第一层的数组类型字段中
+			// 第二层的对象类型字段放入第一层的数组类型字段中
 			aL_STR2_field.add(STR2_field);
-			//解析返回的json
-			hashMap = CU_JSONResolve.parseHashMap2(json, null, LIST1_field, aL_STR2_field);
+			// 解析返回的json
+			hashMap = CU_JSONResolve.parseHashMap2(json, null, LIST1_field,
+					aL_STR2_field);
 			return hashMap;
 		}
 
 		@SuppressWarnings("unchecked")
 		@Override
 		protected void onPostExecute(HashMap<String, Object> result) {
-			
-			if (dialog!=null&&dialog.isShowing()) {
+
+			if (dialog != null && dialog.isShowing()) {
 				dialog.dismiss();
-				dialog=null;
+				dialog = null;
 			}
-			
-			
-			//如果网络数据请求失败，那么显示默认的数据
+
+			// 如果网络数据请求失败，那么显示默认的数据
 			if (result != null && result.get("data") != null) {
-				//得到data字段的数据
-				arrayList.addAll((Collection<? extends HashMap<String, Object>>) result.get("data"));
-				listView.setAdapter(new Adapter_ListView_text(SearchTextActivity.this, arrayList));
+				// 得到data字段的数据
+				arrayList
+						.addAll((Collection<? extends HashMap<String, Object>>) result
+								.get("data"));
+				listView.setAdapter(new Adapter_ListView_text(
+						SearchTextActivity.this, arrayList));
 				listView.setOnItemClickListener(new OnItemClickListener() {
 					@Override
-					public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-						Intent intent = new Intent(SearchTextActivity.this, SpotActivity.class);
+					public void onItemClick(AdapterView<?> arg0, View arg1,
+							int position, long arg3) {
+						Intent intent = new Intent(SearchTextActivity.this,
+								SpotActivity.class);
 						startActivity(intent);
 					}
 				});
-				
-			}else {
-				listView.setAdapter(new Adapter_ListView_text(SearchTextActivity.this));
+
+			} else {
+				listView.setAdapter(new Adapter_ListView_text(
+						SearchTextActivity.this));
 				listView.setOnItemClickListener(new OnItemClickListener() {
 					@Override
-					public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-						Intent intent = new Intent(SearchTextActivity.this, SpotActivity.class);
+					public void onItemClick(AdapterView<?> arg0, View arg1,
+							int position, long arg3) {
+						Intent intent = new Intent(SearchTextActivity.this,
+								SpotActivity.class);
 						startActivity(intent);
 					}
 				});
@@ -201,26 +217,55 @@ private class WareTask extends AsyncTask<Void, Void, HashMap<String, Object>> {
 		}
 
 	}
-	
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.qiyou.xListView.XListView.IXListViewListener#onRefresh()
+
+	/**
+	 * 刷新
 	 */
 	@Override
 	public void onRefresh() {
-		// TODO Auto-generated method stub
-
+		// 刷新数据
+		pageIndex = 0;
+		arrayList.clear();
+		new SearchTask().execute();
+		// 停止刷新和加载
+		onLoad();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.qiyou.xListView.XListView.IXListViewListener#onLoadMore()
+	/**
+	 * 加载更多
 	 */
 	@Override
 	public void onLoadMore() {
-		// TODO Auto-generated method stub
+		pageIndex += 1;
+		if (pageIndex >= 4) {
+			Toast.makeText(this, "已经最后一页了", Toast.LENGTH_SHORT).show();
+			onLoad();
+			return;
+		}
+		new SearchTask().execute();
+	}
+
+	/**
+	 * 停止刷新和加载
+	 */
+	private void onLoad() {
+		listView.stopRefresh();
+		// 停止刷新加载更多
+		listView.stopLoadMore();
+		// 设置最后一次刷新时间
+		listView.setRefreshTime(getCurrentTime(System.currentTimeMillis()));
+	}
+
+	/**
+	 * 简单的时间格式
+	 */
+	public static SimpleDateFormat mDateFormat = new SimpleDateFormat();
+
+	public static String getCurrentTime(long time) {
+		if (0 == time) {
+			return "";
+		}
+		return mDateFormat.format(new Date(time));
 
 	}
 
