@@ -33,7 +33,7 @@ public class ShowBigPictrue extends FragmentActivity {
 		setContentView(R.layout.show_big_picture);
 		Intent intent = getIntent();
 		position = intent.getIntExtra("position", 0);
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
+//		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
 	}
 
 	private void initViewPager() {

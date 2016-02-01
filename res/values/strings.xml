@@ -8,6 +8,9 @@
     <string name="sun_refresh_style">Sun refresh style</string>
     <string name="jet_refresh_style">Jet refresh style</string>
     <string name="polite_message">Wait a moment please. Breathe deeply and watch beautiful animation.</string>
+    <string name="translate_type">配送方式</string>
+    <string name="translate_free">快递 包邮</string>
+    <string name="translate_insur">运费险</string>
     <string name="trip_to_india">Trip to India</string>
     <string name="trip_to_italy">Trip to Italy</string>
     <string name="trip_to_indonesia">Trip to Indonesia</string>
@@ -34,7 +37,13 @@
     <string name="spot_trans">景点交通</string>
     <string name="spot_trans_info">迎春东路90号。乘7、10、19、22、36路车可达。</string>
     <string name="buy_num">购买数量</string>
+    <string name="buy_ok_num">x1</string>
     <string name="buy_reduce">-</string>
     <string name="buy_add">+</string>
+    <string name="buy_ok">订单确认</string>
+    <string name="buy_pref">优惠减免200元</string>
+    <string name="buy_number_ens">共1件商品</string>
+    <string name="buy_leave_info">给卖家留言</string>
+    <string name="buy_no_name">匿名购买</string>
 
 </resources>

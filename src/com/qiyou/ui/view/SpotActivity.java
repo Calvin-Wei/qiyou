@@ -11,11 +11,13 @@ import com.qiyou.MyView.SpotPopWindow.OnItemClickListener;
 import com.qiyou.adapter.Adapter_ListView_detail;
 import com.qiyou.custom.ScaleView.HackyViewPager;
 import com.qiyou.launcherGuide.ViewPagerAdapter;
-import com.zdp.aseo.content.AseoZdpAseo;
-
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -84,7 +86,7 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
 		// 进入页面时，初始化广告(广告插件)
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
+//		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
 		((ImageView) findViewById(R.id.iv_back)).setOnClickListener(this);
 		((ImageView) findViewById(R.id.put_in)).setOnClickListener(this);
 		((ImageView) findViewById(R.id.buy_now)).setOnClickListener(this);
@@ -162,7 +164,7 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 		});
 		viewPager.setAdapter(adapter);
 	}
-	
+
 	private class ViewPagerAdapter extends PagerAdapter {
 
 		@Override
@@ -188,14 +190,14 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 		}
 
 	}
-	
 
 	/**
-	 * 
+	 * 得到保存的是否添加收藏标记
 	 */
 	private void getSaveCollection() {
-		// TODO Auto-generated method stub
-
+		SharedPreferences sp = getSharedPreferences("SAVECOLLECTION",
+				Context.MODE_PRIVATE);
+		isCollection = sp.getBoolean("isCollection", false);
 	}
 
 	@Override
@@ -233,42 +235,65 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 		}
 	}
 
-	/**
-	 * @param all_choice_layout2
-	 * @param i
-	 */
-	private void setBackgroundBlack(LinearLayout all_choice_layout2, int i) {
-		// TODO Auto-generated method stub
-
-	}
 
 	/**
-	 * 
+	 * 保存是否添加收藏
 	 */
 	private void setSaveCollection() {
-		// TODO Auto-generated method stub
-
+		SharedPreferences sp = getSharedPreferences("SAVECOLLECTION",
+				Context.MODE_PRIVATE);
+		Editor editor = sp.edit();
+		editor.putBoolean("isCollection", isCollection);
+		editor.commit();
 	}
 
 	/**
-	 * 
+	 * 取消收藏
 	 */
 	private void cancelCollection() {
-		// TODO Auto-generated method stub
+		AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+		dialog.setTitle("是否取消收藏");
+		dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				isCollection = false;
+				// 如果取消收藏，则显示取消收藏后的效果
+				iv_spot_collection.setImageResource(R.drawable.second_2);
+				setSaveCollection();
+			}
+		});
+		dialog.setNegativeButton("取消", null);
+		dialog.create().show();
 	}
 
-	
-	//点击弹窗的确认按钮的响应
+	// 点击弹窗的确认按钮的响应
 	@Override
 	public void onClickOKPop() {
 		setBackgroundBlack(all_choice_layout, 1);
-		if(isClickBuy){
-			//如果之前是点击的立即购买，那么就跳转到立即购物界面
-			Intent intent = new Intent(SpotActivity.this,BuynowActivity.class);
+		if (isClickBuy) {
+			// 如果之前是点击的立即购买，那么就跳转到立即购物界面
+			Intent intent = new Intent(SpotActivity.this, BuynowActivity.class);
 			startActivity(intent);
-		}else{
+		} else {
 			Toast.makeText(this, "添加到购物车成功", Toast.LENGTH_SHORT).show();
+		}
+	}
+
+	/**
+	 * 控制背景变暗0变暗1变亮
+	 * 
+	 * @param view
+	 * @param what
+	 */
+	public void setBackgroundBlack(View view, int what) {
+		switch (what) {
+		case 0:
+			view.setVisibility(View.VISIBLE);
+			break;
+		case 1:
+			view.setVisibility(View.GONE);
+			break;
 		}
 	}
 

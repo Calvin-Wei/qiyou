@@ -72,7 +72,7 @@ public class SearchTextActivity extends Activity implements OnTouchListener,
 	}
 
 	private void initView() {
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
+//		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
 		ll_search = (LinearLayout) findViewById(R.id.ll_choice);
 		ed_search = (EditText) findViewById(R.id.ed_Searchware);
 		iv_back = (ImageView) findViewById(R.id.iv_back);
