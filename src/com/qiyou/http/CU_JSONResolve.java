@@ -250,9 +250,6 @@ public class CU_JSONResolve {
 				return hashMap;
 
 			JSONObject jO0 = new JSONObject(jsonStr);
-			// if (jO0.has("success"))
-			// if (!jO0.getBoolean("success"))
-			// return hashMap;
 
 			if (STR1_field != null && STR1_field.length != 0)
 				for (int i = 0; i < STR1_field.length; i++)

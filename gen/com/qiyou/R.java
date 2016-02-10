@@ -11,29 +11,617 @@ public final class R {
     public static final class anim {
         public static final int close=0x7f040000;
         public static final int down_in=0x7f040001;
-        public static final int pop_down_out=0x7f040002;
-        public static final int pop_up_in=0x7f040003;
-        public static final int show=0x7f040004;
-        public static final int up_out=0x7f040005;
-        public static final int zoom_enter=0x7f040006;
-        public static final int zoom_exit=0x7f040007;
+        public static final int loading=0x7f040002;
+        public static final int pop_down_out=0x7f040003;
+        public static final int pop_up_in=0x7f040004;
+        public static final int reverse_anim=0x7f040005;
+        public static final int rotating=0x7f040006;
+        public static final int show=0x7f040007;
+        public static final int up_out=0x7f040008;
+        public static final int zoom_enter=0x7f040009;
+        public static final int zoom_exit=0x7f04000a;
     }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int activeColor=0x7f010024;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int activeRadius=0x7f01002d;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>stroke</code></td><td>0</td><td></td></tr>
+<tr><td><code>fill</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int activeType=0x7f01002b;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindFadeDegree=0x7f01000e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindFadeEnabled=0x7f01000d;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindOffset=0x7f010006;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindScrollScale=0x7f010008;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindWidth=0x7f010007;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int border_color=0x7f010001;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int border_width=0x7f010000;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarButtonStyle=0x7f01003a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonBarStyle=0x7f010039;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int centered=0x7f010028;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circleSeparation=0x7f01002c;
+        /**  Left/right padding of not active view titles. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int clipPadding=0x7f01002f;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int column_count_landscape=0x7f01003c;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int column_count_portrait=0x7f01003b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int customTypeface=0x7f010038;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dividerColor=0x7f01001e;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int dividerDrawable=0x7f010021;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dividerMarginBottom=0x7f010020;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dividerMarginTop=0x7f01001f;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeOut=0x7f010029;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeOutDelay=0x7f010017;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeOutDuration=0x7f010018;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int footerColor=0x7f010036;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int footerLineHeight=0x7f010035;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int footerTriangleHeight=0x7f010037;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingBottom=0x7f010041;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingLeft=0x7f01003e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingRight=0x7f01003f;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int grid_paddingTop=0x7f010040;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int horizontalSpacing=0x7f010011;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int inactiveColor=0x7f010025;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>stroke</code></td><td>0</td><td></td></tr>
+<tr><td><code>fill</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int inactiveType=0x7f01002a;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int item_margin=0x7f01003d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layout_breakLine=0x7f010013;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layout_horizontalSpacing=0x7f010014;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lineColor=0x7f01001a;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lineColorSelected=0x7f01001b;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lineHeight=0x7f01001c;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lineHeightSelected=0x7f01001d;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>4</td><td></td></tr>
+<tr><td><code>right</code></td><td>5</td><td></td></tr>
+<tr><td><code>both</code></td><td>6</td><td></td></tr>
+</table>
+         */
+        public static final int mode=0x7f010002;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int outsideOffset=0x7f010022;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int radius=0x7f010026;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int roundHeight=0x7f010016;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int roundWidth=0x7f010015;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectedBold=0x7f010031;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectedColor=0x7f010030;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectedSize=0x7f010032;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int selectorDrawable=0x7f010010;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectorEnabled=0x7f01000f;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int shadowDrawable=0x7f01000b;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int shadowWidth=0x7f01000c;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sidebuffer=0x7f010023;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int spacing=0x7f010027;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColor=0x7f010033;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColorSelected=0x7f010019;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textSize=0x7f010034;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int titlePadding=0x7f01002e;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int touchModeAbove=0x7f010009;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int touchModeBehind=0x7f01000a;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int verticalSpacing=0x7f010012;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewAbove=0x7f010003;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewBehindLeft=0x7f010004;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewBehindRight=0x7f010005;
     }
     public static final class color {
         public static final int bg_Gray=0x7f050003;
         public static final int bg_Gray_light=0x7f050002;
         public static final int bg_White=0x7f050001;
-        public static final int eggplant=0x7f050008;
-        public static final int money=0x7f05000c;
-        public static final int saffron=0x7f050007;
-        public static final int sienna=0x7f050009;
+        public static final int bg_light_blue=0x7f050004;
+        public static final int blue=0x7f05000e;
+        public static final int eggplant=0x7f050009;
+        public static final int low_blue=0x7f050010;
+        public static final int money=0x7f05000d;
+        public static final int orange=0x7f05000f;
+        public static final int saffron=0x7f050008;
+        public static final int sienna=0x7f05000a;
         public static final int silver=0x7f050000;
-        public static final int sky_background=0x7f050006;
-        public static final int text_border=0x7f050004;
-        public static final int tv_Black=0x7f050005;
-        public static final int tv_Red=0x7f05000a;
-        public static final int tv_white=0x7f05000b;
+        public static final int sky_background=0x7f050007;
+        public static final int text_border=0x7f050005;
+        public static final int tv_Black=0x7f050006;
+        public static final int tv_Red=0x7f05000b;
+        public static final int tv_white=0x7f05000c;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -52,231 +640,362 @@ public final class R {
     public static final class drawable {
         public static final int abc_ic_clear_disabled=0x7f020000;
         public static final int abc_ic_clear_search_api_holo_light=0x7f020001;
-        public static final int airplane=0x7f020002;
-        public static final int android_layout_bg=0x7f020003;
-        public static final int arrow_expend_right=0x7f020004;
-        public static final int bg_edit_ware=0x7f020005;
-        public static final int bg_menu_edit=0x7f020006;
-        public static final int btn_innew=0x7f020007;
-        public static final int buy_now=0x7f020008;
-        public static final int clouds_center=0x7f020009;
-        public static final int clouds_left=0x7f02000a;
-        public static final int clouds_right=0x7f02000b;
-        public static final int detail_show=0x7f02000c;
-        public static final int detail_show_1=0x7f02000d;
-        public static final int detail_show_2=0x7f02000e;
-        public static final int dot_focused=0x7f02000f;
-        public static final int dot_normal=0x7f020010;
-        public static final int guide_1=0x7f020011;
-        public static final int guide_2=0x7f020012;
-        public static final int guide_3=0x7f020013;
-        public static final int guide_4=0x7f020014;
-        public static final int home_tab_feel_selector=0x7f020015;
-        public static final int home_tab_main_selector=0x7f020016;
-        public static final int home_tab_personal_selector=0x7f020017;
-        public static final int ic_feel_focus=0x7f020018;
-        public static final int ic_feel_normal=0x7f020019;
-        public static final int ic_launcher=0x7f02001a;
-        public static final int icon_around=0x7f02001b;
-        public static final int icon_gonglv=0x7f02001c;
-        public static final int icon_head=0x7f02001d;
-        public static final int icon_home_search=0x7f02001e;
-        public static final int icon_hotel=0x7f02001f;
-        public static final int icon_jingdian=0x7f020020;
-        public static final int icon_logo=0x7f020021;
-        public static final int icon_plan=0x7f020022;
-        public static final int icon_plane=0x7f020023;
-        public static final int icon_scan=0x7f020024;
-        public static final int icon_ticket=0x7f020025;
-        public static final int icon_together=0x7f020026;
-        public static final int icon_train=0x7f020027;
-        public static final int image01=0x7f020028;
-        public static final int image02=0x7f020029;
-        public static final int image03=0x7f02002a;
-        public static final int logo=0x7f02002b;
-        public static final int main_bottom_tab_home_focus=0x7f02002c;
-        public static final int main_bottom_tab_home_normal=0x7f02002d;
-        public static final int main_bottom_tab_personal_focus=0x7f02002e;
-        public static final int main_bottom_tab_personal_normal=0x7f02002f;
-        public static final int no_image=0x7f020030;
-        public static final int put_in=0x7f020031;
-        public static final int search_box=0x7f020032;
-        public static final int second_2=0x7f020033;
-        public static final int second_2_collection=0x7f020034;
-        public static final int tb_icon_actionbar_back=0x7f020035;
-        public static final int tb_icon_actionbar_more=0x7f020036;
-        public static final int tb_icon_actionbar_refresh_48=0x7f020037;
-        public static final int title_bg=0x7f020038;
-        public static final int top_search=0x7f020039;
-        public static final int user_10=0x7f02003a;
-        public static final int user_2=0x7f02003b;
-        public static final int user_8=0x7f02003c;
-        public static final int user_9=0x7f02003d;
-        public static final int viewpager_bottom_bg=0x7f02003e;
-        public static final int voice=0x7f02003f;
-        public static final int xlistview_arrow=0x7f020040;
-        public static final int yuanjiao=0x7f020041;
-        public static final int yuanjiao_red=0x7f020042;
-        public static final int zhijiao=0x7f020043;
-        public static final int zhijiao_gray=0x7f020044;
+        public static final int abc_ic_go=0x7f020002;
+        public static final int airplane=0x7f020003;
+        public static final int android_layout_bg=0x7f020004;
+        public static final int arrow_expend_right=0x7f020005;
+        public static final int badge_traveler_v2_42=0x7f020006;
+        public static final int beijing=0x7f020007;
+        public static final int bg_edit_ware=0x7f020008;
+        public static final int bg_menu_edit=0x7f020009;
+        public static final int btn_innew=0x7f02000a;
+        public static final int buy_now=0x7f02000b;
+        public static final int clouds_center=0x7f02000c;
+        public static final int clouds_left=0x7f02000d;
+        public static final int clouds_right=0x7f02000e;
+        public static final int defaultcovers=0x7f02000f;
+        public static final int detail_show=0x7f020010;
+        public static final int detail_show_1=0x7f020011;
+        public static final int detail_show_2=0x7f020012;
+        public static final int dot_focused=0x7f020013;
+        public static final int dot_normal=0x7f020014;
+        public static final int guide_1=0x7f020015;
+        public static final int guide_2=0x7f020016;
+        public static final int guide_3=0x7f020017;
+        public static final int guide_4=0x7f020018;
+        public static final int headimage=0x7f020019;
+        public static final int home_tab_feel_selector=0x7f02001a;
+        public static final int home_tab_main_selector=0x7f02001b;
+        public static final int home_tab_personal_selector=0x7f02001c;
+        public static final int ic_comment_pressed=0x7f02001d;
+        public static final int ic_feel_focus=0x7f02001e;
+        public static final int ic_feel_normal=0x7f02001f;
+        public static final int ic_launcher=0x7f020020;
+        public static final int ic_more_action_normal=0x7f020021;
+        public static final int ic_more_action_pressed=0x7f020022;
+        public static final int icon_around=0x7f020023;
+        public static final int icon_eye_white_34=0x7f020024;
+        public static final int icon_gonglv=0x7f020025;
+        public static final int icon_head=0x7f020026;
+        public static final int icon_home_search=0x7f020027;
+        public static final int icon_hotel=0x7f020028;
+        public static final int icon_jingdian=0x7f020029;
+        public static final int icon_like_red_32=0x7f02002a;
+        public static final int icon_like_white_34=0x7f02002b;
+        public static final int icon_location_white_34=0x7f02002c;
+        public static final int icon_logo=0x7f02002d;
+        public static final int icon_plan=0x7f02002e;
+        public static final int icon_plane=0x7f02002f;
+        public static final int icon_scan=0x7f020030;
+        public static final int icon_star_yellow_32=0x7f020031;
+        public static final int icon_ticket=0x7f020032;
+        public static final int icon_together=0x7f020033;
+        public static final int icon_train=0x7f020034;
+        public static final int image01=0x7f020035;
+        public static final int image02=0x7f020036;
+        public static final int image03=0x7f020037;
+        public static final int item_comment_selector=0x7f020038;
+        public static final int item_share_seletor=0x7f020039;
+        public static final int load_failed=0x7f02003a;
+        public static final int load_succeed=0x7f02003b;
+        public static final int loading=0x7f02003c;
+        public static final int loading_0=0x7f02003d;
+        public static final int loading_1=0x7f02003e;
+        public static final int loading_2=0x7f02003f;
+        public static final int loading_3=0x7f020040;
+        public static final int loading_4=0x7f020041;
+        public static final int loading_5=0x7f020042;
+        public static final int loading_6=0x7f020043;
+        public static final int loading_7=0x7f020044;
+        public static final int logo=0x7f020045;
+        public static final int main_bottom_tab_home_focus=0x7f020046;
+        public static final int main_bottom_tab_home_normal=0x7f020047;
+        public static final int main_bottom_tab_personal_focus=0x7f020048;
+        public static final int main_bottom_tab_personal_normal=0x7f020049;
+        public static final int no_image=0x7f02004a;
+        public static final int pullup_icon_big=0x7f02004b;
+        public static final int put_in=0x7f02004c;
+        public static final int refresh_failed=0x7f02004d;
+        public static final int refresh_succeed=0x7f02004e;
+        public static final int refreshing=0x7f02004f;
+        public static final int search_box=0x7f020050;
+        public static final int second_2=0x7f020051;
+        public static final int second_2_collection=0x7f020052;
+        public static final int tb_icon_actionbar_back=0x7f020053;
+        public static final int tb_icon_actionbar_more=0x7f020054;
+        public static final int tb_icon_actionbar_refresh_48=0x7f020055;
+        public static final int title_bg=0x7f020056;
+        public static final int top_search=0x7f020057;
+        public static final int user_10=0x7f020058;
+        public static final int user_2=0x7f020059;
+        public static final int user_8=0x7f02005a;
+        public static final int user_9=0x7f02005b;
+        public static final int viewpager_bottom_bg=0x7f02005c;
+        public static final int voice=0x7f02005d;
+        public static final int xlistview_arrow=0x7f02005e;
+        public static final int yuanjiao=0x7f02005f;
+        public static final int yuanjiao_red=0x7f020060;
+        public static final int zhijiao=0x7f020061;
+        public static final int zhijiao_gray=0x7f020062;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a004d;
-        public static final int adgallery=0x7f0a0007;
-        public static final int all_choice_layout=0x7f0a0041;
-        public static final int bt_buy_back=0x7f0a002c;
-        public static final int buy_now=0x7f0a0040;
-        public static final int city_selector=0x7f0a0018;
-        public static final int content=0x7f0a001d;
-        public static final int ed_Searchware=0x7f0a0039;
-        public static final int gridView_user=0x7f0a000d;
-        public static final int guanggao=0x7f0a0006;
-        public static final int home_radio_button_group=0x7f0a0000;
-        public static final int home_tab_feel=0x7f0a0002;
-        public static final int home_tab_main=0x7f0a0001;
-        public static final int home_tab_personal=0x7f0a0004;
-        public static final int home_tab_plan=0x7f0a0003;
-        public static final int icon=0x7f0a001b;
-        public static final int imageView1=0x7f0a0009;
-        public static final int iv_adapter_grid_pic=0x7f0a001a;
-        public static final int iv_adapter_list_pic=0x7f0a001f;
-        public static final int iv_baby=0x7f0a003c;
-        public static final int iv_back=0x7f0a0038;
-        public static final int iv_option_back=0x7f0a0033;
-        public static final int iv_refresh=0x7f0a0043;
-        public static final int iv_spot_collection=0x7f0a003d;
-        public static final int listView_Detail=0x7f0a003e;
-        public static final int listView_text=0x7f0a0036;
-        public static final int list_view=0x7f0a0013;
-        public static final int ll_choice=0x7f0a0037;
-        public static final int ll_user_hotel=0x7f0a000f;
-        public static final int ll_user_jingdian=0x7f0a000e;
-        public static final int ll_user_members=0x7f0a0010;
-        public static final int ll_user_opinion=0x7f0a0011;
-        public static final int llayout=0x7f0a0005;
-        public static final int my_team_manage=0x7f0a000b;
-        public static final int my_ticket=0x7f0a000c;
-        public static final int name=0x7f0a0020;
-        public static final int name_user=0x7f0a001c;
-        public static final int ovalLayout=0x7f0a0008;
-        public static final int pic_item=0x7f0a0034;
-        public static final int pop_MeiLanFang_park=0x7f0a0025;
-        public static final int pop_add=0x7f0a002a;
-        public static final int pop_del=0x7f0a0023;
-        public static final int pop_num=0x7f0a0029;
-        public static final int pop_ok=0x7f0a002b;
-        public static final int pop_reduce=0x7f0a0028;
-        public static final int price=0x7f0a0021;
-        public static final int pull_to_refresh=0x7f0a0012;
-        public static final int put_in=0x7f0a003f;
-        public static final int sale_num=0x7f0a0022;
-        public static final int scale_pic_item=0x7f0a0035;
-        public static final int search_button=0x7f0a0017;
-        public static final int search_edit=0x7f0a0016;
-        public static final int search_top_layout=0x7f0a0014;
-        public static final int search_top_logo=0x7f0a0015;
-        public static final int spot_name=0x7f0a0024;
-        public static final int spot_time=0x7f0a0026;
-        public static final int spot_trans_info=0x7f0a0027;
-        public static final int textView1=0x7f0a000a;
-        public static final int text_view_name=0x7f0a0032;
-        public static final int time=0x7f0a001e;
-        public static final int top=0x7f0a003b;
-        public static final int tvInNew=0x7f0a0031;
-        public static final int tv_buy_ok=0x7f0a0030;
-        public static final int tv_name=0x7f0a002d;
-        public static final int tv_num=0x7f0a002f;
-        public static final int tv_price=0x7f0a002e;
-        public static final int tv_top_title=0x7f0a0042;
-        public static final int viewPager_show_big_Pic=0x7f0a003a;
-        public static final int vp_activity=0x7f0a0019;
-        public static final int xlistview_footer_content=0x7f0a0044;
-        public static final int xlistview_footer_hint_textview=0x7f0a0045;
-        public static final int xlistview_footer_progressbar=0x7f0a0046;
-        public static final int xlistview_header_arrow=0x7f0a004b;
-        public static final int xlistview_header_content=0x7f0a0047;
-        public static final int xlistview_header_hint_textview=0x7f0a0049;
-        public static final int xlistview_header_progressbar=0x7f0a004c;
-        public static final int xlistview_header_text=0x7f0a0048;
-        public static final int xlistview_header_time=0x7f0a004a;
+        public static final int CommentCount=0x7f0a0011;
+        public static final int action_settings=0x7f0a008d;
+        public static final int adgallery=0x7f0a0015;
+        public static final int all_choice_layout=0x7f0a0073;
+        public static final int both=0x7f0a0000;
+        public static final int bt_buy_back=0x7f0a0041;
+        public static final int buy_now=0x7f0a0072;
+        public static final int city_selector=0x7f0a0026;
+        public static final int content=0x7f0a0032;
+        public static final int data=0x7f0a002c;
+        public static final int dataLinearLayout=0x7f0a0028;
+        public static final int detail_main_title=0x7f0a000d;
+        public static final int ed_Searchware=0x7f0a006b;
+        public static final int fill=0x7f0a0005;
+        public static final int fullscreen=0x7f0a0003;
+        public static final int gridView_user=0x7f0a001b;
+        public static final int gridview=0x7f0a002b;
+        public static final int gridview_imageview=0x7f0a0083;
+        public static final int guanggao=0x7f0a0014;
+        public static final int head_view=0x7f0a0062;
+        public static final int home_radio_button_group=0x7f0a0007;
+        public static final int home_tab_feel=0x7f0a0009;
+        public static final int home_tab_main=0x7f0a0008;
+        public static final int home_tab_personal=0x7f0a000b;
+        public static final int home_tab_plan=0x7f0a000a;
+        public static final int icon=0x7f0a0030;
+        public static final int imageView1=0x7f0a0017;
+        public static final int imageView2=0x7f0a0053;
+        public static final int imageView3=0x7f0a0055;
+        public static final int imageView4=0x7f0a0082;
+        public static final int image_zhuanti_listView=0x7f0a008b;
+        public static final int iv_adapter_grid_pic=0x7f0a002f;
+        public static final int iv_adapter_list_pic=0x7f0a0034;
+        public static final int iv_baby=0x7f0a006e;
+        public static final int iv_back=0x7f0a006a;
+        public static final int iv_option_back=0x7f0a0060;
+        public static final int iv_refresh=0x7f0a0075;
+        public static final int iv_spot_collection=0x7f0a006f;
+        public static final int jingxuanLinearLayout=0x7f0a004a;
+        public static final int jingxuan_detail_content=0x7f0a0048;
+        public static final int jingxuan_detail_list_image=0x7f0a0047;
+        public static final int jingxuan_detail_listview=0x7f0a000e;
+        public static final int jingxuan_detail_main_image=0x7f0a0049;
+        public static final int jingxuan_detail_main_txt=0x7f0a000f;
+        public static final int jingxuan_favoriteCount=0x7f0a0052;
+        public static final int jingxuan_imageView=0x7f0a004d;
+        public static final int jingxuan_listview=0x7f0a004c;
+        public static final int jingxuan_main_title=0x7f0a002a;
+        public static final int jingxuan_txt_address=0x7f0a004f;
+        public static final int jingxuan_txt_eye=0x7f0a0054;
+        public static final int jingxuan_txt_picCount=0x7f0a0056;
+        public static final int jingxuan_txt_title=0x7f0a0051;
+        public static final int jingxuan_user_circleImageView=0x7f0a0050;
+        public static final int left=0x7f0a0001;
+        public static final int likeCount=0x7f0a0010;
+        public static final int list=0x7f0a000c;
+        public static final int listView_Detail=0x7f0a0070;
+        public static final int listView_text=0x7f0a0068;
+        public static final int list_view=0x7f0a0021;
+        public static final int ll_choice=0x7f0a0069;
+        public static final int ll_user_hotel=0x7f0a001d;
+        public static final int ll_user_jingdian=0x7f0a001c;
+        public static final int ll_user_members=0x7f0a001e;
+        public static final int ll_user_opinion=0x7f0a001f;
+        public static final int llayout=0x7f0a0013;
+        public static final int loading=0x7f0a005e;
+        public static final int loadingRelativieLayout=0x7f0a005d;
+        public static final int loading_icon=0x7f0a005a;
+        public static final int loading_text=0x7f0a005f;
+        public static final int loadmore_view=0x7f0a0058;
+        public static final int loadstate_iv=0x7f0a005c;
+        public static final int loadstate_tv=0x7f0a005b;
+        public static final int location=0x7f0a004e;
+        public static final int lvxing_zhuanti_listView=0x7f0a0089;
+        public static final int margin=0x7f0a0004;
+        public static final int my_team_manage=0x7f0a0019;
+        public static final int my_ticket=0x7f0a001a;
+        public static final int name=0x7f0a0035;
+        public static final int name_user=0x7f0a0031;
+        public static final int ovalLayout=0x7f0a0016;
+        public static final int pic_item=0x7f0a0061;
+        public static final int pop_MeiLanFang_park=0x7f0a003a;
+        public static final int pop_add=0x7f0a003f;
+        public static final int pop_del=0x7f0a0038;
+        public static final int pop_num=0x7f0a003e;
+        public static final int pop_ok=0x7f0a0040;
+        public static final int pop_reduce=0x7f0a003d;
+        public static final int price=0x7f0a0036;
+        public static final int publish_date=0x7f0a0081;
+        public static final int pull_icon=0x7f0a0063;
+        public static final int pull_to_refresh=0x7f0a0020;
+        public static final int pullup_icon=0x7f0a0059;
+        public static final int put_in=0x7f0a0071;
+        public static final int refresh_view=0x7f0a004b;
+        public static final int refreshing_icon=0x7f0a0064;
+        public static final int relativeLayout1=0x7f0a0029;
+        public static final int right=0x7f0a0002;
+        public static final int sale_num=0x7f0a0037;
+        public static final int scale_pic_item=0x7f0a0067;
+        public static final int search_button=0x7f0a0025;
+        public static final int search_edit=0x7f0a0024;
+        public static final int search_top_layout=0x7f0a0022;
+        public static final int search_top_logo=0x7f0a0023;
+        public static final int share=0x7f0a0012;
+        public static final int spot_name=0x7f0a0039;
+        public static final int spot_time=0x7f0a003b;
+        public static final int spot_trans_info=0x7f0a003c;
+        public static final int state_iv=0x7f0a0066;
+        public static final int state_tv=0x7f0a0065;
+        public static final int stroke=0x7f0a0006;
+        public static final int textView1=0x7f0a0018;
+        public static final int text_content=0x7f0a0086;
+        public static final int text_view_name=0x7f0a0057;
+        public static final int time=0x7f0a0033;
+        public static final int top=0x7f0a006d;
+        public static final int tour_zhuanti_listview=0x7f0a002e;
+        public static final int tvInNew=0x7f0a0046;
+        public static final int tv_buy_ok=0x7f0a0045;
+        public static final int tv_name=0x7f0a0042;
+        public static final int tv_num=0x7f0a0044;
+        public static final int tv_price=0x7f0a0043;
+        public static final int tv_top_title=0x7f0a0074;
+        public static final int user_circleImageView=0x7f0a007f;
+        public static final int user_name=0x7f0a0080;
+        public static final int viewPager_show_big_Pic=0x7f0a006c;
+        public static final int vp_activity=0x7f0a0027;
+        public static final int xlistview_footer_content=0x7f0a0076;
+        public static final int xlistview_footer_hint_textview=0x7f0a0077;
+        public static final int xlistview_footer_progressbar=0x7f0a0078;
+        public static final int xlistview_header_arrow=0x7f0a007d;
+        public static final int xlistview_header_content=0x7f0a0079;
+        public static final int xlistview_header_hint_textview=0x7f0a007b;
+        public static final int xlistview_header_progressbar=0x7f0a007e;
+        public static final int xlistview_header_text=0x7f0a007a;
+        public static final int xlistview_header_time=0x7f0a007c;
+        public static final int zhuanti_address=0x7f0a0084;
+        public static final int zhuanti_commentCount=0x7f0a0088;
+        public static final int zhuanti_image_more=0x7f0a008a;
+        public static final int zhuanti_likeCount=0x7f0a0087;
+        public static final int zhuanti_main_image=0x7f0a008c;
+        public static final int zhuanti_main_title=0x7f0a002d;
+        public static final int zhuanti_title=0x7f0a0085;
     }
     public static final class layout {
         public static final int activity_feel=0x7f030000;
         public static final int activity_home=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_personal=0x7f030003;
-        public static final int activity_plan=0x7f030004;
-        public static final int activity_pull_to_refresh=0x7f030005;
-        public static final int activity_search_bar=0x7f030006;
-        public static final int activity_viewpager=0x7f030007;
-        public static final int adapter_gridview_home=0x7f030008;
-        public static final int adapter_listview_detail=0x7f030009;
-        public static final int adapter_listview_text=0x7f03000a;
-        public static final int adapter_popwindow=0x7f03000b;
-        public static final int buy_now_ticket=0x7f03000c;
-        public static final int fragment_1=0x7f03000d;
-        public static final int fragment_2=0x7f03000e;
-        public static final int fragment_3=0x7f03000f;
-        public static final int fragment_4=0x7f030010;
-        public static final int list_item=0x7f030011;
-        public static final int my_team_manage=0x7f030012;
-        public static final int pic_item=0x7f030013;
-        public static final int scale_pic_item=0x7f030014;
-        public static final int search_text=0x7f030015;
-        public static final int show_big_picture=0x7f030016;
-        public static final int spotdetail_a=0x7f030017;
-        public static final int topmenu_back=0x7f030018;
-        public static final int xlistview_footer=0x7f030019;
-        public static final int xlistview_header=0x7f03001a;
+        public static final int activity_jingxuan_details=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_personal=0x7f030004;
+        public static final int activity_plan=0x7f030005;
+        public static final int activity_pull_to_refresh=0x7f030006;
+        public static final int activity_search_bar=0x7f030007;
+        public static final int activity_viewpager=0x7f030008;
+        public static final int activity_zhaunti_detail_image=0x7f030009;
+        public static final int activity_zhuanti_detail=0x7f03000a;
+        public static final int adapter_gridview_home=0x7f03000b;
+        public static final int adapter_listview_detail=0x7f03000c;
+        public static final int adapter_listview_text=0x7f03000d;
+        public static final int adapter_popwindow=0x7f03000e;
+        public static final int buy_now_ticket=0x7f03000f;
+        public static final int fragment_1=0x7f030010;
+        public static final int fragment_2=0x7f030011;
+        public static final int fragment_3=0x7f030012;
+        public static final int fragment_4=0x7f030013;
+        public static final int jingxuan_detail_item=0x7f030014;
+        public static final int jingxuan_details_header=0x7f030015;
+        public static final int jingxuan_fragment=0x7f030016;
+        public static final int jingxuan_item=0x7f030017;
+        public static final int list_item=0x7f030018;
+        public static final int load_more=0x7f030019;
+        public static final int loading=0x7f03001a;
+        public static final int my_team_manage=0x7f03001b;
+        public static final int pic_item=0x7f03001c;
+        public static final int refresh_head=0x7f03001d;
+        public static final int scale_pic_item=0x7f03001e;
+        public static final int search_text=0x7f03001f;
+        public static final int show_big_picture=0x7f030020;
+        public static final int spotdetail_a=0x7f030021;
+        public static final int topmenu_back=0x7f030022;
+        public static final int xlistview_footer=0x7f030023;
+        public static final int xlistview_header=0x7f030024;
+        public static final int zhuanti_detail_image_item=0x7f030025;
+        public static final int zhuanti_fragment=0x7f030026;
+        public static final int zhuanti_item=0x7f030027;
     }
     public static final class menu {
         public static final int main=0x7f090000;
     }
     public static final class string {
         public static final int action_settings=0x7f070002;
-        public static final int adapter_content=0x7f070014;
-        public static final int adapter_cost_buy=0x7f070013;
-        public static final int adapter_time=0x7f070015;
+        public static final int adapter_content=0x7f070019;
+        public static final int adapter_cost_buy=0x7f070018;
+        public static final int adapter_time=0x7f07001a;
         public static final int app_name=0x7f070000;
-        public static final int buy_add=0x7f070026;
-        public static final int buy_leave_info=0x7f07002a;
-        public static final int buy_no_name=0x7f07002b;
-        public static final int buy_num=0x7f070023;
-        public static final int buy_number_ens=0x7f070029;
-        public static final int buy_ok=0x7f070027;
-        public static final int buy_ok_num=0x7f070024;
-        public static final int buy_pref=0x7f070028;
-        public static final int buy_reduce=0x7f070025;
+        public static final int buy_add=0x7f07002f;
+        public static final int buy_leave_info=0x7f070033;
+        public static final int buy_no_name=0x7f070034;
+        public static final int buy_num=0x7f07002c;
+        public static final int buy_number_ens=0x7f070032;
+        public static final int buy_ok=0x7f070030;
+        public static final int buy_ok_num=0x7f07002d;
+        public static final int buy_pref=0x7f070031;
+        public static final int buy_reduce=0x7f07002e;
         public static final int hello_world=0x7f070001;
         public static final int hint_searchText=0x7f070003;
+        public static final int image_zhuanti=0x7f070042;
         public static final int jet_refresh_style=0x7f070005;
+        public static final int load_fail=0x7f07001e;
+        public static final int load_succeed=0x7f07001d;
+        public static final int loading=0x7f070035;
+        public static final int love_num=0x7f07003d;
+        public static final int more=0x7f070043;
+        public static final int picture=0x7f07003f;
         public static final int polite_message=0x7f070006;
-        public static final int spot_buy=0x7f070017;
-        public static final int spot_cost=0x7f070016;
-        public static final int spot_detail=0x7f07001f;
-        public static final int spot_evaluate=0x7f07001c;
-        public static final int spot_introduction=0x7f070019;
-        public static final int spot_name=0x7f07001a;
-        public static final int spot_open=0x7f070020;
-        public static final int spot_open_time=0x7f07001e;
-        public static final int spot_place=0x7f070018;
-        public static final int spot_show=0x7f07001b;
-        public static final int spot_showname=0x7f07001d;
-        public static final int spot_trans=0x7f070021;
-        public static final int spot_trans_info=0x7f070022;
+        public static final int pull_to_refresh=0x7f07000d;
+        public static final int pullup_to_load=0x7f07000e;
+        public static final int refresh_fail=0x7f07001c;
+        public static final int refresh_succeed=0x7f07001b;
+        public static final int refreshing=0x7f070010;
+        public static final int release_to_load=0x7f070011;
+        public static final int release_to_refresh=0x7f07000f;
+        public static final int share=0x7f07003c;
+        public static final int spot_buy=0x7f070020;
+        public static final int spot_cost=0x7f07001f;
+        public static final int spot_detail=0x7f070028;
+        public static final int spot_evaluate=0x7f070025;
+        public static final int spot_introduction=0x7f070022;
+        public static final int spot_name=0x7f070023;
+        public static final int spot_open=0x7f070029;
+        public static final int spot_open_time=0x7f070027;
+        public static final int spot_place=0x7f070021;
+        public static final int spot_show=0x7f070024;
+        public static final int spot_showname=0x7f070026;
+        public static final int spot_trans=0x7f07002a;
+        public static final int spot_trans_info=0x7f07002b;
         public static final int sun_refresh_style=0x7f070004;
+        public static final int text_a=0x7f070041;
+        public static final int text_num=0x7f07003e;
         public static final int translate_free=0x7f070008;
         public static final int translate_insur=0x7f070009;
         public static final int translate_type=0x7f070007;
+        public static final int travel_city=0x7f070037;
+        public static final int travel_city_info=0x7f070038;
+        public static final int travel_judge=0x7f07003a;
+        public static final int travel_love=0x7f07003b;
+        public static final int travel_prinvince=0x7f070039;
         public static final int trip_to_india=0x7f07000a;
         public static final int trip_to_indonesia=0x7f07000c;
         public static final int trip_to_italy=0x7f07000b;
-        public static final int xlistview_footer_hint_normal=0x7f07000e;
-        public static final int xlistview_footer_hint_ready=0x7f07000d;
-        public static final int xlistview_header_hint_loading=0x7f070012;
-        public static final int xlistview_header_hint_normal=0x7f07000f;
-        public static final int xlistview_header_hint_ready=0x7f070011;
-        public static final int xlistview_header_last_time=0x7f070010;
+        public static final int username=0x7f070036;
+        public static final int watch_num=0x7f070040;
+        public static final int xlistview_footer_hint_normal=0x7f070013;
+        public static final int xlistview_footer_hint_ready=0x7f070012;
+        public static final int xlistview_header_hint_loading=0x7f070017;
+        public static final int xlistview_header_hint_normal=0x7f070014;
+        public static final int xlistview_header_hint_ready=0x7f070016;
+        public static final int xlistview_header_last_time=0x7f070015;
     }
     public static final class style {
         /** 
@@ -308,4 +1027,1247 @@ public final class R {
         public static final int home_tab_bottom=0x7f080003;
         public static final int popWindow_anim_style=0x7f080000;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ButtonBarContainerTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarButtonStyle com.qiyou:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_buttonBarStyle com.qiyou:buttonBarStyle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonBarContainerTheme_buttonBarButtonStyle
+           @see #ButtonBarContainerTheme_buttonBarStyle
+         */
+        public static final int[] ButtonBarContainerTheme = {
+            0x7f010039, 0x7f01003a
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#buttonBarButtonStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:buttonBarButtonStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#buttonBarStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:buttonBarStyle
+        */
+        public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
+        /** Attributes that can be used with a CircleFlowIndicator.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_activeColor com.qiyou:activeColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_activeRadius com.qiyou:activeRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_activeType com.qiyou:activeType}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_centered com.qiyou:centered}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_circleSeparation com.qiyou:circleSeparation}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_fadeOut com.qiyou:fadeOut}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_inactiveColor com.qiyou:inactiveColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_inactiveType com.qiyou:inactiveType}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_radius com.qiyou:radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleFlowIndicator_spacing com.qiyou:spacing}</code></td><td></td></tr>
+           </table>
+           @see #CircleFlowIndicator_activeColor
+           @see #CircleFlowIndicator_activeRadius
+           @see #CircleFlowIndicator_activeType
+           @see #CircleFlowIndicator_centered
+           @see #CircleFlowIndicator_circleSeparation
+           @see #CircleFlowIndicator_fadeOut
+           @see #CircleFlowIndicator_inactiveColor
+           @see #CircleFlowIndicator_inactiveType
+           @see #CircleFlowIndicator_radius
+           @see #CircleFlowIndicator_spacing
+         */
+        public static final int[] CircleFlowIndicator = {
+            0x7f010024, 0x7f010025, 0x7f010026, 0x7f010027,
+            0x7f010028, 0x7f010029, 0x7f01002a, 0x7f01002b,
+            0x7f01002c, 0x7f01002d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#activeColor}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:activeColor
+        */
+        public static final int CircleFlowIndicator_activeColor = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#activeRadius}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:activeRadius
+        */
+        public static final int CircleFlowIndicator_activeRadius = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#activeType}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>stroke</code></td><td>0</td><td></td></tr>
+<tr><td><code>fill</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.qiyou:activeType
+        */
+        public static final int CircleFlowIndicator_activeType = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#centered}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:centered
+        */
+        public static final int CircleFlowIndicator_centered = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#circleSeparation}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:circleSeparation
+        */
+        public static final int CircleFlowIndicator_circleSeparation = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#fadeOut}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:fadeOut
+        */
+        public static final int CircleFlowIndicator_fadeOut = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#inactiveColor}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:inactiveColor
+        */
+        public static final int CircleFlowIndicator_inactiveColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#inactiveType}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>stroke</code></td><td>0</td><td></td></tr>
+<tr><td><code>fill</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.qiyou:inactiveType
+        */
+        public static final int CircleFlowIndicator_inactiveType = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#radius}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:radius
+        */
+        public static final int CircleFlowIndicator_radius = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#spacing}
+          attribute's value can be found in the {@link #CircleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:spacing
+        */
+        public static final int CircleFlowIndicator_spacing = 3;
+        /** Attributes that can be used with a CircleImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircleImageView_border_color com.qiyou:border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_border_width com.qiyou:border_width}</code></td><td></td></tr>
+           </table>
+           @see #CircleImageView_border_color
+           @see #CircleImageView_border_width
+         */
+        public static final int[] CircleImageView = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#border_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:border_color
+        */
+        public static final int CircleImageView_border_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#border_width}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:border_width
+        */
+        public static final int CircleImageView_border_width = 0;
+        /** Attributes that can be used with a FlowLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FlowLayout_horizontalSpacing com.qiyou:horizontalSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_verticalSpacing com.qiyou:verticalSpacing}</code></td><td></td></tr>
+           </table>
+           @see #FlowLayout_horizontalSpacing
+           @see #FlowLayout_verticalSpacing
+         */
+        public static final int[] FlowLayout = {
+            0x7f010011, 0x7f010012
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#horizontalSpacing}
+          attribute's value can be found in the {@link #FlowLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:horizontalSpacing
+        */
+        public static final int FlowLayout_horizontalSpacing = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#verticalSpacing}
+          attribute's value can be found in the {@link #FlowLayout} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:verticalSpacing
+        */
+        public static final int FlowLayout_verticalSpacing = 1;
+        /** Attributes that can be used with a FlowLayout_LayoutParams.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FlowLayout_LayoutParams_layout_breakLine com.qiyou:layout_breakLine}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_LayoutParams_layout_horizontalSpacing com.qiyou:layout_horizontalSpacing}</code></td><td></td></tr>
+           </table>
+           @see #FlowLayout_LayoutParams_layout_breakLine
+           @see #FlowLayout_LayoutParams_layout_horizontalSpacing
+         */
+        public static final int[] FlowLayout_LayoutParams = {
+            0x7f010013, 0x7f010014
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#layout_breakLine}
+          attribute's value can be found in the {@link #FlowLayout_LayoutParams} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:layout_breakLine
+        */
+        public static final int FlowLayout_LayoutParams_layout_breakLine = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#layout_horizontalSpacing}
+          attribute's value can be found in the {@link #FlowLayout_LayoutParams} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:layout_horizontalSpacing
+        */
+        public static final int FlowLayout_LayoutParams_layout_horizontalSpacing = 1;
+        /** Attributes that can be used with a RoundAngleImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #RoundAngleImageView_roundHeight com.qiyou:roundHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #RoundAngleImageView_roundWidth com.qiyou:roundWidth}</code></td><td></td></tr>
+           </table>
+           @see #RoundAngleImageView_roundHeight
+           @see #RoundAngleImageView_roundWidth
+         */
+        public static final int[] RoundAngleImageView = {
+            0x7f010015, 0x7f010016
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#roundHeight}
+          attribute's value can be found in the {@link #RoundAngleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:roundHeight
+        */
+        public static final int RoundAngleImageView_roundHeight = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#roundWidth}
+          attribute's value can be found in the {@link #RoundAngleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:roundWidth
+        */
+        public static final int RoundAngleImageView_roundWidth = 0;
+        /** Attributes that can be used with a SlidingMenu.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SlidingMenu_behindFadeDegree com.qiyou:behindFadeDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindFadeEnabled com.qiyou:behindFadeEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindOffset com.qiyou:behindOffset}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindScrollScale com.qiyou:behindScrollScale}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindWidth com.qiyou:behindWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_mode com.qiyou:mode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorDrawable com.qiyou:selectorDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorEnabled com.qiyou:selectorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowDrawable com.qiyou:shadowDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowWidth com.qiyou:shadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeAbove com.qiyou:touchModeAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeBehind com.qiyou:touchModeBehind}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewAbove com.qiyou:viewAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewBehindLeft com.qiyou:viewBehindLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewBehindRight com.qiyou:viewBehindRight}</code></td><td></td></tr>
+           </table>
+           @see #SlidingMenu_behindFadeDegree
+           @see #SlidingMenu_behindFadeEnabled
+           @see #SlidingMenu_behindOffset
+           @see #SlidingMenu_behindScrollScale
+           @see #SlidingMenu_behindWidth
+           @see #SlidingMenu_mode
+           @see #SlidingMenu_selectorDrawable
+           @see #SlidingMenu_selectorEnabled
+           @see #SlidingMenu_shadowDrawable
+           @see #SlidingMenu_shadowWidth
+           @see #SlidingMenu_touchModeAbove
+           @see #SlidingMenu_touchModeBehind
+           @see #SlidingMenu_viewAbove
+           @see #SlidingMenu_viewBehindLeft
+           @see #SlidingMenu_viewBehindRight
+         */
+        public static final int[] SlidingMenu = {
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
+            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d,
+            0x7f01000e, 0x7f01000f, 0x7f010010
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#behindFadeDegree}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:behindFadeDegree
+        */
+        public static final int SlidingMenu_behindFadeDegree = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#behindFadeEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:behindFadeEnabled
+        */
+        public static final int SlidingMenu_behindFadeEnabled = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#behindOffset}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:behindOffset
+        */
+        public static final int SlidingMenu_behindOffset = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#behindScrollScale}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:behindScrollScale
+        */
+        public static final int SlidingMenu_behindScrollScale = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#behindWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:behindWidth
+        */
+        public static final int SlidingMenu_behindWidth = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#mode}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>4</td><td></td></tr>
+<tr><td><code>right</code></td><td>5</td><td></td></tr>
+<tr><td><code>both</code></td><td>6</td><td></td></tr>
+</table>
+          @attr name com.qiyou:mode
+        */
+        public static final int SlidingMenu_mode = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#selectorDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:selectorDrawable
+        */
+        public static final int SlidingMenu_selectorDrawable = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#selectorEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:selectorEnabled
+        */
+        public static final int SlidingMenu_selectorEnabled = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#shadowDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:shadowDrawable
+        */
+        public static final int SlidingMenu_shadowDrawable = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#shadowWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:shadowWidth
+        */
+        public static final int SlidingMenu_shadowWidth = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#touchModeAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.qiyou:touchModeAbove
+        */
+        public static final int SlidingMenu_touchModeAbove = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#touchModeBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.qiyou:touchModeBehind
+        */
+        public static final int SlidingMenu_touchModeBehind = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#viewAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:viewAbove
+        */
+        public static final int SlidingMenu_viewAbove = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#viewBehindLeft}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:viewBehindLeft
+        */
+        public static final int SlidingMenu_viewBehindLeft = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#viewBehindRight}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:viewBehindRight
+        */
+        public static final int SlidingMenu_viewBehindRight = 3;
+        /** Attributes that can be used with a StaggeredGridView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #StaggeredGridView_column_count_landscape com.qiyou:column_count_landscape}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_column_count_portrait com.qiyou:column_count_portrait}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingBottom com.qiyou:grid_paddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingLeft com.qiyou:grid_paddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingRight com.qiyou:grid_paddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_grid_paddingTop com.qiyou:grid_paddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #StaggeredGridView_item_margin com.qiyou:item_margin}</code></td><td></td></tr>
+           </table>
+           @see #StaggeredGridView_column_count_landscape
+           @see #StaggeredGridView_column_count_portrait
+           @see #StaggeredGridView_grid_paddingBottom
+           @see #StaggeredGridView_grid_paddingLeft
+           @see #StaggeredGridView_grid_paddingRight
+           @see #StaggeredGridView_grid_paddingTop
+           @see #StaggeredGridView_item_margin
+         */
+        public static final int[] StaggeredGridView = {
+            0x7f01003b, 0x7f01003c, 0x7f01003d, 0x7f01003e,
+            0x7f01003f, 0x7f010040, 0x7f010041
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#column_count_landscape}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:column_count_landscape
+        */
+        public static final int StaggeredGridView_column_count_landscape = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#column_count_portrait}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:column_count_portrait
+        */
+        public static final int StaggeredGridView_column_count_portrait = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#grid_paddingBottom}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:grid_paddingBottom
+        */
+        public static final int StaggeredGridView_grid_paddingBottom = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#grid_paddingLeft}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:grid_paddingLeft
+        */
+        public static final int StaggeredGridView_grid_paddingLeft = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#grid_paddingRight}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:grid_paddingRight
+        */
+        public static final int StaggeredGridView_grid_paddingRight = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#grid_paddingTop}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:grid_paddingTop
+        */
+        public static final int StaggeredGridView_grid_paddingTop = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#item_margin}
+          attribute's value can be found in the {@link #StaggeredGridView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:item_margin
+        */
+        public static final int StaggeredGridView_item_margin = 2;
+        /** Attributes that can be used with a TitleFlowIndicator.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_clipPadding com.qiyou:clipPadding}</code></td><td> Left/right padding of not active view titles.</td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_customTypeface com.qiyou:customTypeface}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_footerColor com.qiyou:footerColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_footerLineHeight com.qiyou:footerLineHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_footerTriangleHeight com.qiyou:footerTriangleHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_selectedBold com.qiyou:selectedBold}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_selectedColor com.qiyou:selectedColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_selectedSize com.qiyou:selectedSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_textColor com.qiyou:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_textSize com.qiyou:textSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #TitleFlowIndicator_titlePadding com.qiyou:titlePadding}</code></td><td></td></tr>
+           </table>
+           @see #TitleFlowIndicator_clipPadding
+           @see #TitleFlowIndicator_customTypeface
+           @see #TitleFlowIndicator_footerColor
+           @see #TitleFlowIndicator_footerLineHeight
+           @see #TitleFlowIndicator_footerTriangleHeight
+           @see #TitleFlowIndicator_selectedBold
+           @see #TitleFlowIndicator_selectedColor
+           @see #TitleFlowIndicator_selectedSize
+           @see #TitleFlowIndicator_textColor
+           @see #TitleFlowIndicator_textSize
+           @see #TitleFlowIndicator_titlePadding
+         */
+        public static final int[] TitleFlowIndicator = {
+            0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031,
+            0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035,
+            0x7f010036, 0x7f010037, 0x7f010038
+        };
+        /**
+          <p>
+          @attr description
+           Left/right padding of not active view titles. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.qiyou:clipPadding
+        */
+        public static final int TitleFlowIndicator_clipPadding = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#customTypeface}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:customTypeface
+        */
+        public static final int TitleFlowIndicator_customTypeface = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#footerColor}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:footerColor
+        */
+        public static final int TitleFlowIndicator_footerColor = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#footerLineHeight}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:footerLineHeight
+        */
+        public static final int TitleFlowIndicator_footerLineHeight = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#footerTriangleHeight}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:footerTriangleHeight
+        */
+        public static final int TitleFlowIndicator_footerTriangleHeight = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#selectedBold}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:selectedBold
+        */
+        public static final int TitleFlowIndicator_selectedBold = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#selectedColor}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:selectedColor
+        */
+        public static final int TitleFlowIndicator_selectedColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#selectedSize}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:selectedSize
+        */
+        public static final int TitleFlowIndicator_selectedSize = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#textColor}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:textColor
+        */
+        public static final int TitleFlowIndicator_textColor = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#textSize}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:textSize
+        */
+        public static final int TitleFlowIndicator_textSize = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#titlePadding}
+          attribute's value can be found in the {@link #TitleFlowIndicator} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:titlePadding
+        */
+        public static final int TitleFlowIndicator_titlePadding = 0;
+        /** Attributes that can be used with a ViewFlow.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ViewFlow_sidebuffer com.qiyou:sidebuffer}</code></td><td></td></tr>
+           </table>
+           @see #ViewFlow_sidebuffer
+         */
+        public static final int[] ViewFlow = {
+            0x7f010023
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#sidebuffer}
+          attribute's value can be found in the {@link #ViewFlow} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:sidebuffer
+        */
+        public static final int ViewFlow_sidebuffer = 0;
+        /** Attributes that can be used with a ViewPagerExtensions.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_dividerColor com.qiyou:dividerColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_dividerDrawable com.qiyou:dividerDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_dividerMarginBottom com.qiyou:dividerMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_dividerMarginTop com.qiyou:dividerMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_fadeOutDelay com.qiyou:fadeOutDelay}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_fadeOutDuration com.qiyou:fadeOutDuration}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_lineColor com.qiyou:lineColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_lineColorSelected com.qiyou:lineColorSelected}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_lineHeight com.qiyou:lineHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_lineHeightSelected com.qiyou:lineHeightSelected}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_outsideOffset com.qiyou:outsideOffset}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewPagerExtensions_textColorSelected com.qiyou:textColorSelected}</code></td><td></td></tr>
+           </table>
+           @see #ViewPagerExtensions_dividerColor
+           @see #ViewPagerExtensions_dividerDrawable
+           @see #ViewPagerExtensions_dividerMarginBottom
+           @see #ViewPagerExtensions_dividerMarginTop
+           @see #ViewPagerExtensions_fadeOutDelay
+           @see #ViewPagerExtensions_fadeOutDuration
+           @see #ViewPagerExtensions_lineColor
+           @see #ViewPagerExtensions_lineColorSelected
+           @see #ViewPagerExtensions_lineHeight
+           @see #ViewPagerExtensions_lineHeightSelected
+           @see #ViewPagerExtensions_outsideOffset
+           @see #ViewPagerExtensions_textColorSelected
+         */
+        public static final int[] ViewPagerExtensions = {
+            0x7f010017, 0x7f010018, 0x7f010019, 0x7f01001a,
+            0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e,
+            0x7f01001f, 0x7f010020, 0x7f010021, 0x7f010022
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#dividerColor}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:dividerColor
+        */
+        public static final int ViewPagerExtensions_dividerColor = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#dividerDrawable}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.qiyou:dividerDrawable
+        */
+        public static final int ViewPagerExtensions_dividerDrawable = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#dividerMarginBottom}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:dividerMarginBottom
+        */
+        public static final int ViewPagerExtensions_dividerMarginBottom = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#dividerMarginTop}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:dividerMarginTop
+        */
+        public static final int ViewPagerExtensions_dividerMarginTop = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#fadeOutDelay}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:fadeOutDelay
+        */
+        public static final int ViewPagerExtensions_fadeOutDelay = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#fadeOutDuration}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:fadeOutDuration
+        */
+        public static final int ViewPagerExtensions_fadeOutDuration = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#lineColor}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:lineColor
+        */
+        public static final int ViewPagerExtensions_lineColor = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#lineColorSelected}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:lineColorSelected
+        */
+        public static final int ViewPagerExtensions_lineColorSelected = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#lineHeight}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:lineHeight
+        */
+        public static final int ViewPagerExtensions_lineHeight = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#lineHeightSelected}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:lineHeightSelected
+        */
+        public static final int ViewPagerExtensions_lineHeightSelected = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#outsideOffset}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:outsideOffset
+        */
+        public static final int ViewPagerExtensions_outsideOffset = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.qiyou.R.attr#textColorSelected}
+          attribute's value can be found in the {@link #ViewPagerExtensions} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.qiyou:textColorSelected
+        */
+        public static final int ViewPagerExtensions_textColorSelected = 2;
+    };
 }

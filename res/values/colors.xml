@@ -5,13 +5,18 @@
     <color name="bg_White">#FFFFFF</color>
     <color name="bg_Gray_light">#EEEEEE</color>
     <color name="bg_Gray">#CCCCCC</color>
+    <color name="bg_light_blue">#99CCFF</color>
     <color name="text_border">#00000000</color>
     <color name="tv_Black">#000000</color>
     <color name="sky_background">#228FC1</color>
     <color name="saffron">#F1B136</color>
     <color name="eggplant">#03A679</color>
     <color name="sienna">#EB6460</color>
-	<color name="tv_Red">#CC0000</color>
-	<color name="tv_white">#FFFFFF</color>
-	<color name="money">#CC3366</color>
+    <color name="tv_Red">#CC0000</color>
+    <color name="tv_white">#FFFFFF</color>
+    <color name="money">#CC3366</color>
+    <color name="blue">#3399CC</color>
+    <color name="orange">#FF6600</color>
+    <color name="low_blue">#0099CC</color>
+
 </resources>
