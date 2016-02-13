@@ -4,6 +4,7 @@
 package com.qiyou.ui.view;
 
 import com.qiyou.R;
+import com.qiyou.activity.WuliuActivity;
 import com.qiyou.adapter.Adapter_GridView;
 import com.qiyou.team.Team_Manage;
 import com.qiyou.ticket.Ticket_Manage;
@@ -37,6 +38,7 @@ public class UserActivity extends Activity implements OnClickListener {
 	private LinearLayout ll_user_opinion;// 关于我们
 	private LinearLayout my_team_manage;// 我的团队管理
 	private LinearLayout my_ticket;// 我的门票
+	private LinearLayout my_wuliu;// 我的物流
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,12 +57,14 @@ public class UserActivity extends Activity implements OnClickListener {
 		ll_user_opinion = (LinearLayout) findViewById(R.id.ll_user_opinion);
 		my_team_manage = (LinearLayout) findViewById(R.id.my_team_manage);
 		my_ticket = (LinearLayout) findViewById(R.id.my_ticket);
+		my_wuliu = (LinearLayout) findViewById(R.id.my_wuliu);
 		ll_user_jingdian.setOnClickListener(this);
 		ll_user_members.setOnClickListener(this);
 		ll_user_hotel.setOnClickListener(this);
 		ll_user_opinion.setOnClickListener(this);
 		my_team_manage.setOnClickListener(this);
 		my_ticket.setOnClickListener(this);
+		my_wuliu.setOnClickListener(this);
 		// my_gridView_user=(GridView) view.findViewById(R.id.gridView_user);
 	}
 
@@ -91,7 +95,10 @@ public class UserActivity extends Activity implements OnClickListener {
 			Intent ticket_intent = new Intent(UserActivity.this,
 					Ticket_Manage.class);
 			startActivity(ticket_intent);
-
+		case R.id.my_wuliu:
+			Intent Wuliu_intent = new Intent(UserActivity.this,
+					WuliuActivity.class);
+			startActivity(Wuliu_intent);
 		default:
 			break;
 		}

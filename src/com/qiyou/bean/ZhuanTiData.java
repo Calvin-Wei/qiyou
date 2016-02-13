@@ -9,31 +9,32 @@ package com.qiyou.bean;
  * @author 谞臣 专题数据
  */
 public class ZhuanTiData {
-	private String id;
-	private String name;
-	private String image;
+	private int id;
+	private String message;
+	private String time;
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
-	public String getImage() {
-		return image;
+	public String getTime() {
+		return time;
 	}
 
-	public void setImage(String image) {
-		this.image = image;
+	public void setTime(String time) {
+		this.time = time;
 	}
+
 }

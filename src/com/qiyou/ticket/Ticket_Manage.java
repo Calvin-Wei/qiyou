@@ -3,7 +3,8 @@
  */
 package com.qiyou.ticket;
 
-import com.qiyou.ui.base.BaseActivity;
+import android.app.Activity;
+
 
 /**
  * @齐游
@@ -11,28 +12,7 @@ import com.qiyou.ui.base.BaseActivity;
  * @author 谞臣
  * 
  */
-public class Ticket_Manage extends BaseActivity {
+public class Ticket_Manage extends Activity {
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.qiyou.ui.base.BaseActivity#findViewById()
-	 */
-	@Override
-	protected void findViewById() {
-		// TODO Auto-generated method stub
-
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.qiyou.ui.base.BaseActivity#initView()
-	 */
-	@Override
-	protected void initView() {
-		// TODO Auto-generated method stub
-
-	}
 
 }

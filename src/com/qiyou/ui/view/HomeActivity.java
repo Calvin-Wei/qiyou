@@ -4,13 +4,21 @@
 package com.qiyou.ui.view;
 
 import com.qiyou.R;
-import com.qiyou.refresh.view.PullToRefreshActivity;
+import com.qiyou.activity.WordsActivity;
+import com.qiyou.activity.ZhuanTiActivity;
+import com.qiyou.adapter.Adapter_GridView;
 import com.qiyou.util.AppManager;
 
 import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
@@ -23,6 +31,7 @@ import android.widget.TabHost;
 @SuppressWarnings("deprecation")
 public class HomeActivity extends TabActivity {
 	public static final String TAG = HomeActivity.class.getSimpleName();
+	
 	// 下面的按钮组
 	private RadioGroup mTabButtonGroup;
 	private TabHost mTabHost;
@@ -30,7 +39,7 @@ public class HomeActivity extends TabActivity {
 	 * 
 	 */
 	public static final String TAB_MAIN = "MAIN_ACTIVITY";
-	public static final String TAB_FEEL = "PullToRefresh_ACTIVITY";
+	public static final String TAB_FEEL = "Words_ACTIVITY";
 	public static final String TAB_PLAN = "PLAN_ACTIVITY";
 	public static final String TAB_USER = "USER_ACTIVITY";
 
@@ -47,10 +56,11 @@ public class HomeActivity extends TabActivity {
 	 * 加载页面
 	 */
 	private void initView() {
+
 		mTabHost = getTabHost();
 		Intent i_main = new Intent(this, MainActivity.class);
-		Intent i_plan = new Intent(this, PlanActivity.class);
-		Intent i_found = new Intent(this, PullToRefreshActivity.class);
+		Intent i_plan = new Intent(this, ZhuanTiActivity.class);
+		Intent i_found = new Intent(this, WordsActivity.class);
 		Intent i_personal = new Intent(this, UserActivity.class);
 		mTabHost.addTab(mTabHost.newTabSpec(TAB_MAIN).setIndicator(TAB_MAIN)
 				.setContent(i_main));

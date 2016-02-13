@@ -38,12 +38,12 @@ public class BuynowActivity extends Activity {
 				finish();
 			}
 		});
-		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
 		bt_ok=(TextView) findViewById(R.id.tv_buy_ok);
 		bt_ok.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				Toast.makeText(BuynowActivity.this, "暂无法支付", Toast.LENGTH_SHORT).show();
+				Toast.makeText(BuynowActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+				finish();
 			}
 		});
 		

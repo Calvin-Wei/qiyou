@@ -1,6 +1,7 @@
 package com.qiyou.ui.view;
 
 import com.qiyou.R;
+import com.qiyou.adapter.Adapter_GridView;
 import com.qiyou.ggl.network.NetUtils;
 import com.qiyou.ggl.view.MyPagerGalleryView;
 import com.qiyou.ggl.view.MyPagerGalleryView.MyOnItemClickListener;
@@ -10,6 +11,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -18,9 +21,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends FragmentActivity {
 
@@ -47,6 +53,15 @@ public class MainActivity extends FragmentActivity {
 	 */
 	NetReceiver mReceiver = new NetReceiver();
 	IntentFilter mFilter = new IntentFilter();
+
+	// 分类的九宫格
+	private GridView gridView;
+	// 九宫格按钮
+	private Adapter_GridView adapter_GridView;
+	private int[] pic_path_classify = { R.drawable.icon_train,
+			R.drawable.icon_plane, R.drawable.icon_jingdian,
+			R.drawable.icon_around, R.drawable.icon_ticket,
+			R.drawable.icon_hotel, R.drawable.icon_together };
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -86,6 +101,20 @@ public class MainActivity extends FragmentActivity {
 		// 注册监听网络状态的广播
 		mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 		registerReceiver(mReceiver, mFilter);
+
+		gridView = (GridView) findViewById(R.id.my_gridview);
+		gridView.setSelector(new ColorDrawable(Color.TRANSPARENT));
+		adapter_GridView = new Adapter_GridView(getApplicationContext(),
+				pic_path_classify);
+		gridView.setAdapter(adapter_GridView);
+		gridView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+
+			}
+		});
 	}
 
 	/**

@@ -52,10 +52,6 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".ui.view.FeelActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
             android:name=".ui.view.PlanActivity"
             android:label="@string/app_name" >
         </activity>
@@ -84,13 +80,23 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".ui.view.ShowBigPictrue"
+            android:name=".activity.WordsActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".refresh.view.PullToRefreshActivity"
+            android:name=".activity.ZhuanTiItemDetailActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".activity.ZhuanTiActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.WuliuActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service android:name="com.admob.zkapp.covers.ViewService" />
     </application>
 
 </manifest>

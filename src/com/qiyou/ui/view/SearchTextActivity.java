@@ -148,9 +148,9 @@ public class SearchTextActivity extends Activity implements OnTouchListener,
 		protected HashMap<String, Object> doInBackground(Void... arg0) {
 			String url = "";
 			if (pageIndex == 0) {
-				url = "http://192.168.0.111:3000/taoBaoQuery";
+				url = "";
 			} else {
-				url = "http://192.168.0.111:3000/taoBaoQuery?pageIndex="
+				url = ""
 						+ pageIndex;
 			}
 			// 请求数据，返回json

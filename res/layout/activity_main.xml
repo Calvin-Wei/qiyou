@@ -39,6 +39,23 @@
                     android:orientation="horizontal" >
                 </LinearLayout>
             </FrameLayout>
+
+            <com.qiyou.MyView.MyGridView
+                android:id="@+id/my_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/guanggao"
+                android:horizontalSpacing="10dp"
+                android:numColumns="4"
+                android:verticalSpacing="10dp" >
+            </com.qiyou.MyView.MyGridView>
+
+            <ImageView
+                android:id="@+id/icon_main_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_gridview"
+                android:src="@drawable/icon_main_bg" />
         </RelativeLayout>
     </ScrollView>
 

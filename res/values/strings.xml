@@ -11,9 +11,9 @@
     <string name="translate_type">配送方式</string>
     <string name="translate_free">快递 包邮</string>
     <string name="translate_insur">运费险</string>
-    <string name="trip_to_india">Trip to India</string>
-    <string name="trip_to_italy">Trip to Italy</string>
-    <string name="trip_to_indonesia">Trip to Indonesia</string>
+    <string name="trip_to_india">常州环球恐龙城非常好</string>
+    <string name="trip_to_italy">北京故宫非常好玩</string>
+    <string name="trip_to_indonesia">郑州世纪欢乐园非常好玩</string>
     <string name="pull_to_refresh">下拉刷新</string>
     <string name="pullup_to_load">上拉加载更多</string>
     <string name="release_to_refresh">释放立即刷新</string>
@@ -69,5 +69,14 @@
     <string name="text_a">说走就走的旅行</string>
     <string name="image_zhuanti">图片专题</string>
     <string name="more">更多</string>
+    <string name="words_name">旅游心得体会</string>
+    <string name="words_answer">内容，60字以内</string>
+    <string name="words_face">表情</string>
+    <string name="words_coment">内容，100字以内</string>
+    <string name="detail">景点专题</string>
+    <string name="zhuanti_detail">选择了鹰航，印尼国家航空，据说有些五星服务的航班，当然也有着与五星相匹配的价格。飞行时间7小时，直飞，提前给希曼申请了睡篮和婴儿餐，国际上标准规定是9kg，75cm以下，希曼都已经超标，好在空姐都很nice，于是宝宝有了这一次美妙的航空体验。半夜起床，略有些烦躁，经历了登机最初的好奇，起飞时刻的不适（喂水即可，鹰航起飞很平稳，耳鸣不严重），迎来了平稳的飞行，提前准备好的新鲜玩具招呼上，小爷状态还不错。三个多小时后，开始闹觉，着实有点焦头烂额，哄了一会，眯着了，睡篮也送来了，宝贝安稳的睡了2个多小时，降落前夕醒来，吃吃喝喝，迎着扑面而来的热浪，飞机降落在了登巴萨机场…落地签的地方，宝贝第一次见到大规模的外国人，好奇的小眼睛都瞪大了，哎哎地打着招呼，各种游客都很友好的逗着小宝。。
+
+
+旅行，看上去是个愉快的开始~</string>
 
 </resources>

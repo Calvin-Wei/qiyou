@@ -6,6 +6,7 @@ package com.qiyou.adapter;
 import com.qiyou.R;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class Adapter_GridView extends BaseAdapter {
 	public Adapter_GridView(Context context, int[] data) {
 		this.context = context;
 		this.data = data;
+		Log.i("data:  ", data.length+" ");
 	}
 
 	public int getCount() {
@@ -32,7 +34,7 @@ public class Adapter_GridView extends BaseAdapter {
 	}
 
 	public Object getItem(int position) {
-		return position;
+		return data[position];
 	}
 
 	public long getItemId(int position) {

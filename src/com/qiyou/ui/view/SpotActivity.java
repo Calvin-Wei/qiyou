@@ -53,7 +53,7 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 	private int[] resId = { R.drawable.detail_show, R.drawable.detail_show_1,
 			R.drawable.detail_show_2 };
 	private ListView listView;
-	private ImageView iv_spot_collection;
+	private ImageView iv_spot_collection,buy_now;
 	// 弹出景点门票订单信息详情
 	private SpotPopWindow popWindow;
 	// 设置背景暗淡
@@ -64,7 +64,7 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 	private static boolean isCollection = false;
 	// ViewPager当前显示也的下标
 	private int position = 0;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -86,10 +86,11 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
 		// 进入页面时，初始化广告(广告插件)
-//		AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
+		// AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);
 		((ImageView) findViewById(R.id.iv_back)).setOnClickListener(this);
 		((ImageView) findViewById(R.id.put_in)).setOnClickListener(this);
-		((ImageView) findViewById(R.id.buy_now)).setOnClickListener(this);
+		buy_now=(ImageView) findViewById(R.id.buy_now);
+		buy_now.setOnClickListener(this);
 		iv_spot_collection = (ImageView) findViewById(R.id.iv_spot_collection);
 		iv_spot_collection.setOnClickListener(this);
 		all_choice_layout = (LinearLayout) findViewById(R.id.all_choice_layout);
@@ -134,11 +135,11 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 
 				@Override
 				public void onClick(View v) {
-					// 跳转到查看大图的界面
-					Intent intent = new Intent(SpotActivity.this,
-							ShowBigPictrue.class);
-					intent.putExtra("position", position);
-					startActivity(intent);
+					// // 跳转到查看大图的界面
+					// Intent intent = new Intent(SpotActivity.this,
+					// ShowBigPictrue.class);
+					// intent.putExtra("position", position);
+					// startActivity(intent);
 				}
 			});
 			allListView.add(view);
@@ -226,15 +227,16 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 			setBackgroundBlack(all_choice_layout, 0);
 			popWindow.showAsDropDown(v);
 			break;
-		case R.drawable.buy_now:
+		case R.id.buy_now:
 			// 立即购买
+			Intent intent = new Intent(SpotActivity.this, BuynowActivity.class);
+			startActivity(intent);
 			isClickBuy = true;
 			setBackgroundBlack(all_choice_layout, 0);
 			popWindow.showAsDropDown(v);
 			break;
 		}
 	}
-
 
 	/**
 	 * 保存是否添加收藏

@@ -40,7 +40,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@+id/imageView1"
-                        android:text="123456"
+                        android:text="不相信眼泪"
                         android:textColor="@color/bg_White" />
 
                     <ImageView
@@ -125,10 +125,10 @@
                 android:background="@color/bg_Gray_light" />
 
             <LinearLayout
+                android:id="@+id/my_team_manage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:id="@+id/my_team_manage"
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp" >
@@ -161,9 +161,9 @@
                 android:background="@color/bg_Gray" />
 
             <LinearLayout
+                android:id="@+id/my_ticket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/my_ticket"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingBottom="10dp"
@@ -195,6 +195,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/bg_Gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_Gray" />
+
+            <LinearLayout
+                android:id="@+id/my_wuliu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="查看物流"
+                    android:textColor="@color/tv_Black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="查看全部物流信息" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/arrow_expend_right" />
+            </LinearLayout>
 
             <com.qiyou.ui.view.MyGridView
                 android:id="@+id/gridView_user"

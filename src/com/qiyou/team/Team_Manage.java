@@ -3,7 +3,8 @@
  */
 package com.qiyou.team;
 
-import com.qiyou.ui.base.BaseActivity;
+import android.app.Activity;
+
 
 
 /**
@@ -12,28 +13,7 @@ import com.qiyou.ui.base.BaseActivity;
  * @author 谞臣
  * 
  */
-public class Team_Manage extends BaseActivity {
+public class Team_Manage extends Activity {
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.qiyou.ui.base.BaseActivity#findViewById()
-	 */
-	@Override
-	protected void findViewById() {
-		// TODO Auto-generated method stub
-
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.qiyou.ui.base.BaseActivity#initView()
-	 */
-	@Override
-	protected void initView() {
-		// TODO Auto-generated method stub
-
-	}
 
 }
