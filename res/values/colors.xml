@@ -18,5 +18,9 @@
     <color name="blue">#3399CC</color>
     <color name="orange">#FF6600</color>
     <color name="low_blue">#0099CC</color>
+    <color name="grey">#C1CDCD</color>
+    <color name="yellow">#ff7300</color>
+    <color name="time_line_bg">#b3b3b3</color>
+    <color name="head_line_bg">#cccccc</color>
 
 </resources>

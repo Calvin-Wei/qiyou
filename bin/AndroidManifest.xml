@@ -103,12 +103,23 @@
             android:name=".activity.HotelInfoActivity"
             android:label="@string/app_name" >
         </activity>
-		<activity
-		    android:name=".activity.HotelShowActivity"
-		    android:label="@string/app_name" 
-		    >
-		    
-		</activity>
+        <activity
+            android:name=".activity.HotelShowActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ticket.Ticket_Less"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ticket.Ticket_LessInfo"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".team.Time_Manage"
+            android:label="@string/app_name" >
+        </activity>
+
         <service android:name="com.admob.zkapp.covers.ViewService" />
     </application>
 

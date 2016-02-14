@@ -7,7 +7,8 @@ import com.qiyou.R;
 import com.qiyou.activity.HotelActivity;
 import com.qiyou.activity.WuliuActivity;
 import com.qiyou.adapter.Adapter_GridView;
-import com.qiyou.team.Team_Manage;
+import com.qiyou.team.Time_Manage;
+import com.qiyou.ticket.Ticket_Less;
 import com.qiyou.ticket.Ticket_Manage;
 
 import android.app.Activity;
@@ -71,10 +72,11 @@ public class UserActivity extends Activity implements OnClickListener {
 
 	public void onClick(View arg0) {
 		switch (arg0.getId()) {
-		// case R.id.ll_user_jingdian:
-		// Intent intent1=new Intent(getActivity(),User_life.class);
-		// startActivity(intent1);
-		// break;
+		case R.id.ll_user_jingdian:
+			Intent intent1 = new Intent(getApplicationContext(),
+					Ticket_Less.class);
+			startActivity(intent1);
+			break;
 		// case R.id.ll_user_members:
 		// Intent intent2=new Intent(getActivity(),User_life.class);
 		// startActivity(intent2);
@@ -90,7 +92,7 @@ public class UserActivity extends Activity implements OnClickListener {
 		// break;
 		case R.id.my_team_manage:
 			Intent team_intent = new Intent(UserActivity.this,
-					Team_Manage.class);
+					Time_Manage.class);
 			startActivity(team_intent);
 			break;
 		case R.id.my_ticket:

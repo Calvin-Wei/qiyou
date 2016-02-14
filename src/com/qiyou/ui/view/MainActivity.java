@@ -103,6 +103,7 @@ public class MainActivity extends FragmentActivity {
 		registerReceiver(mReceiver, mFilter);
 
 		gridView = (GridView) findViewById(R.id.my_gridview);
+		gridView.setBackgroundColor(Color.CYAN);
 		gridView.setSelector(new ColorDrawable(Color.TRANSPARENT));
 		adapter_GridView = new Adapter_GridView(getApplicationContext(),
 				pic_path_classify);

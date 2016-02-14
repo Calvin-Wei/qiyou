@@ -32,7 +32,7 @@ import android.widget.TextView;
  */
 public class HotelInfoActivity extends Activity implements OnTouchListener {
 
-	public static final String TAG = "BusinessInformation";
+	public static final String TAG = "HotelInfoActivity";
 	public static final int UP = 1;
 	public static final int DOWN = 2;
 	public static final int EACH = 4;
