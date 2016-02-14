@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ta_bg"
+    android:orientation="horizontal" >
+
+    <!-- 头像 -->
+
+    <ImageView
+        android:id="@+id/near_hearview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/nearby_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="速八酒店优惠券"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nearby_item_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="酒店"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/local_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dw" />
+
+            <TextView
+                android:id="@+id/nearby_item_dis1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/local_bg"
+                android:text="300m"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/nearby_item_dis2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="科学大道路129号"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/nearby_item_dis3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2000人使用"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

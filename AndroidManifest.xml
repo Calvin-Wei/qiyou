@@ -95,7 +95,20 @@
             android:name=".activity.WuliuActivity"
             android:label="@string/app_name" >
         </activity>
-
+        <activity
+            android:name=".activity.HotelActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.HotelInfoActivity"
+            android:label="@string/app_name" >
+        </activity>
+		<activity
+		    android:name=".activity.HotelShowActivity"
+		    android:label="@string/app_name" 
+		    >
+		    
+		</activity>
         <service android:name="com.admob.zkapp.covers.ViewService" />
     </application>
 

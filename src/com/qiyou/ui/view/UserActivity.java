@@ -4,6 +4,7 @@
 package com.qiyou.ui.view;
 
 import com.qiyou.R;
+import com.qiyou.activity.HotelActivity;
 import com.qiyou.activity.WuliuActivity;
 import com.qiyou.adapter.Adapter_GridView;
 import com.qiyou.team.Team_Manage;
@@ -78,10 +79,11 @@ public class UserActivity extends Activity implements OnClickListener {
 		// Intent intent2=new Intent(getActivity(),User_life.class);
 		// startActivity(intent2);
 		// break;
-		// case R.id.ll_user_hotel:
-		// Intent intent3=new Intent(getActivity(),User_life.class);
-		// startActivity(intent3);
-		// break;
+		case R.id.ll_user_hotel:
+			Intent intent3 = new Intent(getApplicationContext(),
+					HotelActivity.class);
+			startActivity(intent3);
+			break;
 		// case R.id.ll_user_opinion:
 		// Intent intent4=new Intent(getActivity(),User_opinion.class);
 		// startActivity(intent4);
