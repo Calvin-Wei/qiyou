@@ -1,6 +1,8 @@
 package com.qiyou.ui.view;
 
 import com.qiyou.R;
+import com.qiyou.activity.GridActivity;
+import com.qiyou.activity.JingXuanActivity;
 import com.qiyou.adapter.Adapter_GridView;
 import com.qiyou.ggl.network.NetUtils;
 import com.qiyou.ggl.view.MyPagerGalleryView;
@@ -23,6 +25,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,6 +66,8 @@ public class MainActivity extends FragmentActivity {
 			R.drawable.icon_around, R.drawable.icon_ticket,
 			R.drawable.icon_hotel, R.drawable.icon_together };
 
+	private ImageView dashang;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -98,6 +103,18 @@ public class MainActivity extends FragmentActivity {
 						Toast.LENGTH_SHORT).show();
 			}
 		});
+
+		dashang = (ImageView) findViewById(R.id.icon_main_bg);
+		dashang.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this,
+						JingXuanActivity.class);
+				startActivity(intent);
+			}
+		});
+
 		// 注册监听网络状态的广播
 		mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 		registerReceiver(mReceiver, mFilter);
@@ -113,7 +130,9 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-
+				Intent intent = new Intent(MainActivity.this,
+						GridActivity.class);
+				startActivity(intent);
 			}
 		});
 	}

@@ -9,75 +9,65 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <RelativeLayout 
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            >
-        
-        <com.qiyou.circleimageview.CircleImageView
-            android:id="@+id/circleImageView1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/ic_photo"
-             />
-        
-        <TextView 
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="眼泪太咸丶"
-            android:layout_toRightOf="@id/circleImageView1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            />
-        
-        
-        <TextView 
-            android:id="@+id/tvTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="11 : 30"
-            android:layout_toRightOf="@id/circleImageView1"
-            android:layout_below="@id/tvName"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            
-            />
-        
+            android:layout_height="50dp" >
+
+            <com.qiyou.circleimageview.CircleImageView
+                android:id="@+id/circleImageView1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_photo" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/circleImageView1"
+                android:text="没有眼泪丶" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/circleImageView1"
+                android:text="11 : 30" />
         </RelativeLayout>
-        
-        <TextView 
+
+        <TextView
             android:id="@+id/message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="最近好么，宝宝"
-            android:gravity="center_vertical"
             android:layout_marginLeft="55dp"
-            />
-        
-        <View 
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="最近好么" />
+
+        <View
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:background="#FFFAFA"/>
-        
-        <RelativeLayout 
+            android:background="#FFFAFA" />
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-            
-            <ImageView 
+            android:layout_height="wrap_content" >
+
+            <ImageView
                 android:id="@+id/iv_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/lekan_commentb"/>
+                android:background="@drawable/lekan_commentb" />
         </RelativeLayout>
-        
     </LinearLayout>
 
 </LinearLayout>

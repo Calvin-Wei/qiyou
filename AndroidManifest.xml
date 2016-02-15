@@ -119,6 +119,50 @@
             android:name=".team.Time_Manage"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".team.Team_TeamMates"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.BuyNowHotel"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.BuyNowPlane"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.BuyNowTrain"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.GridActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.Hotel_Activity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.PlaneActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.TrainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".team.TeamActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".team.Ticket_Manage"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.JingXuanActivity"
+            android:label="@string/app_name" >
+        </activity>
 
         <service android:name="com.admob.zkapp.covers.ViewService" />
     </application>

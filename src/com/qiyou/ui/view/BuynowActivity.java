@@ -17,7 +17,7 @@ import android.widget.Toast;
  * @齐游
  * @2016-1-26
  * @author 谞臣
- * @category 确认订单界面
+ * @category 确认景点订单界面
  */
 public class BuynowActivity extends Activity {
 	private TextView bt_ok,bt_back;

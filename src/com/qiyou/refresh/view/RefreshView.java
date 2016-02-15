@@ -20,7 +20,6 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.Interpolator;
@@ -132,7 +131,7 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 		mAnimation = new Animation() {
 			@Override
 			public void applyTransformation(float interpolatedTime,
-					@NonNull Transformation t) {
+					Transformation t) {
 				setLoadingAnimationTime(interpolatedTime);
 			}
 		};
@@ -616,7 +615,7 @@ public class RefreshView extends Drawable implements Drawable.Callback,
 	}
 
 	@Override
-	protected void onBoundsChange(@NonNull Rect bounds) {
+	protected void onBoundsChange(Rect bounds) {
 		super.onBoundsChange(bounds);
 	}
 

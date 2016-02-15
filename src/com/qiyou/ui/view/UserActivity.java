@@ -7,6 +7,7 @@ import com.qiyou.R;
 import com.qiyou.activity.HotelActivity;
 import com.qiyou.activity.WuliuActivity;
 import com.qiyou.adapter.Adapter_GridView;
+import com.qiyou.team.Team_TeamMates;
 import com.qiyou.team.Time_Manage;
 import com.qiyou.ticket.Ticket_Less;
 import com.qiyou.ticket.Ticket_Manage;
@@ -16,7 +17,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +35,7 @@ public class UserActivity extends Activity implements OnClickListener {
 	// private Adapter_GridView adapter_GridView;
 
 	private LinearLayout ll_user_jingdian;// 景点优惠券
-	private LinearLayout ll_user_members;// 会员卡
+	private LinearLayout ll_user_members;// 我的成员
 	private LinearLayout ll_user_hotel;// 酒店优惠券
 	private LinearLayout ll_user_opinion;// 关于我们
 	private LinearLayout my_team_manage;// 我的团队管理
@@ -77,10 +77,11 @@ public class UserActivity extends Activity implements OnClickListener {
 					Ticket_Less.class);
 			startActivity(intent1);
 			break;
-		// case R.id.ll_user_members:
-		// Intent intent2=new Intent(getActivity(),User_life.class);
-		// startActivity(intent2);
-		// break;
+		case R.id.ll_user_members:
+			Intent intent2 = new Intent(getApplicationContext(),
+					Team_TeamMates.class);
+			startActivity(intent2);
+			break;
 		case R.id.ll_user_hotel:
 			Intent intent3 = new Intent(getApplicationContext(),
 					HotelActivity.class);

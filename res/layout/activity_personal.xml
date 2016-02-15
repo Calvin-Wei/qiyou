@@ -378,14 +378,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:text="会员卡"
+                    android:text="我的团队"
                     android:textColor="@color/tv_Black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-                    android:text="一卡在手，旅游无忧" />
+                    android:text="队内所有成员" />
 
                 <ImageView
                     android:layout_width="wrap_content"

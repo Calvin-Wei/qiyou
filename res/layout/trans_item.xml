@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/detail_bg" >
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:focusable="false"
+        android:text="终点站："
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_below="@+id/textView7"
+        android:focusable="false"
+        android:text="到达时间："
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:focusable="false"
+        android:text="始发站："
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:focusable="false"
+        android:text="车次："
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView4"
+        android:focusable="false"
+        android:text="所需时间："
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        android:text="行程："
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_alignLeft="@+id/textView13"
+        android:focusable="false"
+        android:text="发车时间："
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/UseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_toRightOf="@+id/textView15"
+        android:focusable="false"
+        android:text="2:57"
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/TrainCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_alignLeft="@+id/LastStation"
+        android:focusable="false"
+        android:text="K2084次"
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/FirstStation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LastStation"
+        android:layout_below="@+id/textView3"
+        android:focusable="false"
+        android:text="郑州"
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/LastStation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/FirstStation"
+        android:layout_toRightOf="@+id/textView4"
+        android:focusable="false"
+        android:text="安阳"
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView10"
+        android:layout_toRightOf="@+id/UseDate"
+        android:text="(个别列车所需时间有误，请勿轻信)"
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/KM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/StartTime"
+        android:layout_toRightOf="@+id/textView7"
+        android:focusable="false"
+        android:text="326km"
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textViews5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_toRightOf="@+id/textView10"
+        android:text="13:30"
+        android:textColor="@color/tv_Black" />
+
+    <TextView
+        android:id="@+id/textViews6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textViews5"
+        android:layout_below="@+id/textViews5"
+        android:text="16:27"
+        android:textColor="@color/tv_Black" />
+
+    
+
+
+    
+
+</RelativeLayout>

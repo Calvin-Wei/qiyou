@@ -10,11 +10,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="58dp"
         android:background="@drawable/btn_innew"
         android:gravity="center"
         android:text="立即体验"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/guide_textSize" />
+        android:textSize="20sp" />
 
 </RelativeLayout>

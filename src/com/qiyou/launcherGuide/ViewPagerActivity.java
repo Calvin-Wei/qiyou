@@ -8,10 +8,7 @@ import java.util.List;
 
 import com.qiyou.R;
 
-
-
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
@@ -20,8 +17,7 @@ import android.support.v4.view.ViewPager;
 /**
  * @齐游
  * @2015-12-29
- * @author 谞臣
- * 引导页
+ * @author 谞臣 引导页
  */
 public class ViewPagerActivity extends FragmentActivity {
 	private ViewPager mVpActivity;
@@ -33,11 +29,12 @@ public class ViewPagerActivity extends FragmentActivity {
 	private PagerAdapter mPgAdapter;
 
 	@Override
-	protected void onCreate(@Nullable Bundle arg0) {
+	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
 		setContentView(R.layout.activity_viewpager);
 		initView();
 	}
+
 	/**
 	 * 初始化四个引导页
 	 */

@@ -4,10 +4,8 @@
 package com.qiyou.refresh.view;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -78,7 +76,7 @@ public class PullToRefreshView extends ViewGroup {
 
 		addView(mRefreshImageView);
 		setWillNotDraw(false);
-		ViewCompat.setChildrenDrawingOrderEnabled(this, true);
+		// ViewCompat.setChildrenDrawingOrderEnabled(this, true);
 
 	}
 
@@ -118,7 +116,7 @@ public class PullToRefreshView extends ViewGroup {
 	/**
 	 * 触摸操作的拦截 就是对各种触摸操作的一些处理
 	 */
-	public boolean onInterceptTouchEvent(@NonNull MotionEvent ev) {
+	public boolean onInterceptTouchEvent(MotionEvent ev) {
 
 		if (!isEnabled() || canChildScrollUp() || mRefreshing) {
 			return false;
@@ -166,7 +164,7 @@ public class PullToRefreshView extends ViewGroup {
 	/**
 	 * 
 	 */
-	public boolean onTouchEvent(@NonNull MotionEvent ev) {
+	public boolean onTouchEvent(MotionEvent ev) {
 
 		if (!mIsBeingDragged) {
 			return super.onTouchEvent(ev);
@@ -275,24 +273,21 @@ public class PullToRefreshView extends ViewGroup {
 
 	private final Animation mAnimateToStartPosition = new Animation() {
 		@Override
-		public void applyTransformation(float interpolatedTime,
-				@NonNull Transformation t) {
+		public void applyTransformation(float interpolatedTime, Transformation t) {
 			moveToStart(interpolatedTime);
 		}
 	};
 
 	private Animation mAnimateToEndPosition = new Animation() {
 		@Override
-		public void applyTransformation(float interpolatedTime,
-				@NonNull Transformation t) {
+		public void applyTransformation(float interpolatedTime, Transformation t) {
 			moveToEnd(interpolatedTime);
 		}
 	};
 
 	private final Animation mAnimateToCorrectPosition = new Animation() {
 		@Override
-		public void applyTransformation(float interpolatedTime,
-				@NonNull Transformation t) {
+		public void applyTransformation(float interpolatedTime, Transformation t) {
 			int targetTop;
 			int endTarget = mTotalDragDistance;
 			targetTop = (mFrom + (int) ((endTarget - mFrom) * interpolatedTime));
