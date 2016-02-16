@@ -156,7 +156,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".team.Ticket_Manage"
+            android:name=".ticket.Ticket_Manage"
             android:label="@string/app_name" >
         </activity>
         <activity

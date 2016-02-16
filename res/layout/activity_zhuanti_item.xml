@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_White"
+    android:background="@color/bg_light_blue"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -117,39 +117,5 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/btn_wcomment_night"
-            android:gravity="center"
-            android:text="写评论" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dip"
-            android:background="@drawable/comment_btn_night"
-            android:gravity="center"
-            android:text="17" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dip"
-            android:src="@drawable/btn_share_night" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="35dip"
-            android:src="@drawable/more_night" />
-    </LinearLayout>
 
 </LinearLayout>

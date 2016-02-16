@@ -77,7 +77,6 @@ public class PlaneActivity extends Activity implements OnItemClickListener,
 			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
 		((ImageView) findViewById(R.id.plane_iv_back)).setOnClickListener(this);
-		((ImageView) findViewById(R.id.plane_put_in)).setOnClickListener(this);
 		buy_now = (ImageView) findViewById(R.id.plane_buy_now);
 		buy_now.setOnClickListener(this);
 		iv_spot_collection = (ImageView) findViewById(R.id.iv_plane_collection);
@@ -190,19 +189,12 @@ public class PlaneActivity extends Activity implements OnItemClickListener,
 				Toast.makeText(this, "收藏成功", Toast.LENGTH_SHORT).show();
 			}
 			break;
-		case R.id.plane_put_in:
-			// 添加到购物车
-			isClickBuy = false;
-			setBackgroundBlack(all_choice_layout, 0);
-//			popWindow.showAsDropDown(v);
-			break;
 		case R.id.plane_buy_now:
 			// 立即购买
 			Intent intent = new Intent(PlaneActivity.this, BuyNowPlane.class);
 			startActivity(intent);
 			isClickBuy = true;
-			setBackgroundBlack(all_choice_layout, 0);
-//			popWindow.showAsDropDown(v);
+			// popWindow.showAsDropDown(v);
 			break;
 		}
 	}

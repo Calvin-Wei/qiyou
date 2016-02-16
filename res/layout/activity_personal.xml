@@ -14,7 +14,6 @@
             android:orientation="vertical" >
 
             <LinearLayout
-                android:id="@+id/login_personal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#0077ff"
@@ -28,7 +27,7 @@
                     android:layout_marginRight="10dp" >
 
                     <ImageView
-                        android:id="@+id/imageView1"
+                        android:id="@+id/login_personal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/icon_head" />
@@ -39,7 +38,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/imageView1"
+                        android:layout_toRightOf="@+id/login_personal"
                         android:text="不相信眼泪"
                         android:textColor="@color/bg_White" />
 

@@ -80,7 +80,6 @@ public class TrainActivity extends Activity implements OnItemClickListener,
 			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
 		((ImageView) findViewById(R.id.train_iv_back)).setOnClickListener(this);
-		((ImageView) findViewById(R.id.train_put_in)).setOnClickListener(this);
 		buy_now = (ImageView) findViewById(R.id.train_buy_now);
 		buy_now.setOnClickListener(this);
 		iv_spot_collection = (ImageView) findViewById(R.id.iv_train_collection);

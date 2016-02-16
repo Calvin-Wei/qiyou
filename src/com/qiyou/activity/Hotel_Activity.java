@@ -85,7 +85,6 @@ public class Hotel_Activity extends Activity implements OnItemClickListener,
 		listView.setAdapter(new Adapter_ListView_Hotel(this));
 
 		((ImageView) findViewById(R.id.hotel_iv_back)).setOnClickListener(this);
-		((ImageView) findViewById(R.id.hotel_put_in)).setOnClickListener(this);
 		buy_now = (ImageView) findViewById(R.id.hotel_buy_now);
 		buy_now.setOnClickListener(this);
 		iv_spot_collection = (ImageView) findViewById(R.id.iv_hotel_collection);

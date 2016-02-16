@@ -5,6 +5,14 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
+/**
+ * 
+ * 
+ * @QiYou
+ * @2016-2-16
+ * @author 谞臣
+ * 
+ */
 public class HackyViewPager extends ViewPager {
 
 	/**

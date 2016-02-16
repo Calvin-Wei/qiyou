@@ -139,14 +139,6 @@
         android:layout_alignParentBottom="true"
         android:background="#FFFFFF" >
 
-        <ImageView
-            android:id="@+id/plane_put_in"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:layout_toLeftOf="@+id/buy_now"
-            android:src="@drawable/put_in" />
 
         <ImageView
             android:id="@+id/plane_buy_now"

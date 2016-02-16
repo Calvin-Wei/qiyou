@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 /**
@@ -42,7 +43,7 @@ public class UserActivity extends Activity implements OnClickListener {
 	private LinearLayout my_ticket;// 我的门票
 	private LinearLayout my_wuliu;// 我的物流
 
-	private LinearLayout login_personal;
+	private ImageView login_personal;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +63,7 @@ public class UserActivity extends Activity implements OnClickListener {
 		my_team_manage = (LinearLayout) findViewById(R.id.my_team_manage);
 		my_ticket = (LinearLayout) findViewById(R.id.my_ticket);
 		my_wuliu = (LinearLayout) findViewById(R.id.my_wuliu);
-		login_personal = (LinearLayout) findViewById(R.id.login_personal);
+		login_personal = (ImageView) findViewById(R.id.login_personal);
 		ll_user_jingdian.setOnClickListener(this);
 		ll_user_members.setOnClickListener(this);
 		ll_user_hotel.setOnClickListener(this);
@@ -71,7 +72,6 @@ public class UserActivity extends Activity implements OnClickListener {
 		my_ticket.setOnClickListener(this);
 		my_wuliu.setOnClickListener(this);
 		login_personal.setOnClickListener(this);
-		// my_gridView_user=(GridView) view.findViewById(R.id.gridView_user);
 	}
 
 	public void onClick(View arg0) {
@@ -100,13 +100,16 @@ public class UserActivity extends Activity implements OnClickListener {
 			Intent ticket_intent = new Intent(UserActivity.this,
 					Ticket_Manage.class);
 			startActivity(ticket_intent);
+			break;
 		case R.id.my_wuliu:
 			Intent Wuliu_intent = new Intent(UserActivity.this,
 					WuliuActivity.class);
 			startActivity(Wuliu_intent);
+			break;
 		case R.id.login_personal:
 			Intent login = new Intent(UserActivity.this, LoginActivity.class);
 			startActivity(login);
+			break;
 		default:
 			break;
 		}
