@@ -76,7 +76,7 @@ public class Hotel_Activity extends Activity implements OnItemClickListener,
 		// 获取默认的NFC控制器
 		nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (nfcAdapter == null) {
-			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
+//			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
 
 		listView = (ListView) findViewById(R.id.hotel_listView_Detail);

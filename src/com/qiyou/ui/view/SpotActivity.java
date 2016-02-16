@@ -83,7 +83,7 @@ public class SpotActivity extends Activity implements OnItemClickListener,
 		// 获取默认的NFC控制器
 		nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (nfcAdapter == null) {
-			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
+//			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
 		// 进入页面时，初始化广告(广告插件)
 		// AseoZdpAseo.initType(this, AseoZdpAseo.INSERT_TYPE);

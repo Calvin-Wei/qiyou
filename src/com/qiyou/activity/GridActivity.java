@@ -155,7 +155,7 @@ public class GridActivity extends FragmentActivity {
 			currIndex = arg0;
 			int i = currIndex + 1;
 			Toast.makeText(GridActivity.this, "您选择了第" + i + "个页卡",
-					Toast.LENGTH_SHORT).show();
+					100).show();
 		}
 	}
 }

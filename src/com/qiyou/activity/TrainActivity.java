@@ -77,7 +77,7 @@ public class TrainActivity extends Activity implements OnItemClickListener,
 		// 获取默认的NFC控制器
 		nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (nfcAdapter == null) {
-			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
+//			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
 		((ImageView) findViewById(R.id.train_iv_back)).setOnClickListener(this);
 		buy_now = (ImageView) findViewById(R.id.train_buy_now);
