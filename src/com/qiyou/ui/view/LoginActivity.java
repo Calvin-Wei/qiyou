@@ -189,7 +189,8 @@ public class LoginActivity extends Activity implements OnClickListener,
 				}
 				closeLoginingDlg();// 关闭对话框
 				Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
-				finish();
+				Intent intent = new Intent(this, UserActivity.class);
+				startActivity(intent);
 			}
 			break;
 		default:

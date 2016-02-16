@@ -41,7 +41,7 @@ public class HomeActivity extends TabActivity {
 	public static final String TAB_MAIN = "MAIN_ACTIVITY";
 	public static final String TAB_FEEL = "Words_ACTIVITY";
 	public static final String TAB_PLAN = "PLAN_ACTIVITY";
-	public static final String TAB_USER = "UserACTIVITY";
+	public static final String TAB_USER = "LoginACTIVITY";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +61,7 @@ public class HomeActivity extends TabActivity {
 		Intent i_main = new Intent(this, MainActivity.class);
 		Intent i_plan = new Intent(this, ZhuanTiActivity.class);
 		Intent i_found = new Intent(this, WordsActivity.class);
-		Intent i_personal = new Intent(this, UserActivity.class);
+		Intent i_personal = new Intent(this, LoginActivity.class);
 		mTabHost.addTab(mTabHost.newTabSpec(TAB_MAIN).setIndicator(TAB_MAIN)
 				.setContent(i_main));
 		mTabHost.addTab(mTabHost.newTabSpec(TAB_FEEL).setIndicator(TAB_FEEL)
