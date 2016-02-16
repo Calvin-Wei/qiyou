@@ -31,7 +31,7 @@ import android.widget.TabHost;
 @SuppressWarnings("deprecation")
 public class HomeActivity extends TabActivity {
 	public static final String TAG = HomeActivity.class.getSimpleName();
-	
+
 	// 下面的按钮组
 	private RadioGroup mTabButtonGroup;
 	private TabHost mTabHost;
@@ -41,7 +41,7 @@ public class HomeActivity extends TabActivity {
 	public static final String TAB_MAIN = "MAIN_ACTIVITY";
 	public static final String TAB_FEEL = "Words_ACTIVITY";
 	public static final String TAB_PLAN = "PLAN_ACTIVITY";
-	public static final String TAB_USER = "USER_ACTIVITY";
+	public static final String TAB_USER = "UserACTIVITY";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

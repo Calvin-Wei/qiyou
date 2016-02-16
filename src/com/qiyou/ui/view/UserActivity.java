@@ -42,6 +42,8 @@ public class UserActivity extends Activity implements OnClickListener {
 	private LinearLayout my_ticket;// 我的门票
 	private LinearLayout my_wuliu;// 我的物流
 
+	private LinearLayout login_personal;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,6 +62,7 @@ public class UserActivity extends Activity implements OnClickListener {
 		my_team_manage = (LinearLayout) findViewById(R.id.my_team_manage);
 		my_ticket = (LinearLayout) findViewById(R.id.my_ticket);
 		my_wuliu = (LinearLayout) findViewById(R.id.my_wuliu);
+		login_personal = (LinearLayout) findViewById(R.id.login_personal);
 		ll_user_jingdian.setOnClickListener(this);
 		ll_user_members.setOnClickListener(this);
 		ll_user_hotel.setOnClickListener(this);
@@ -67,6 +70,7 @@ public class UserActivity extends Activity implements OnClickListener {
 		my_team_manage.setOnClickListener(this);
 		my_ticket.setOnClickListener(this);
 		my_wuliu.setOnClickListener(this);
+		login_personal.setOnClickListener(this);
 		// my_gridView_user=(GridView) view.findViewById(R.id.gridView_user);
 	}
 
@@ -87,10 +91,6 @@ public class UserActivity extends Activity implements OnClickListener {
 					HotelActivity.class);
 			startActivity(intent3);
 			break;
-		// case R.id.ll_user_opinion:
-		// Intent intent4=new Intent(getActivity(),User_opinion.class);
-		// startActivity(intent4);
-		// break;
 		case R.id.my_team_manage:
 			Intent team_intent = new Intent(UserActivity.this,
 					Time_Manage.class);
@@ -104,6 +104,9 @@ public class UserActivity extends Activity implements OnClickListener {
 			Intent Wuliu_intent = new Intent(UserActivity.this,
 					WuliuActivity.class);
 			startActivity(Wuliu_intent);
+		case R.id.login_personal:
+			Intent login = new Intent(UserActivity.this, LoginActivity.class);
+			startActivity(login);
 		default:
 			break;
 		}

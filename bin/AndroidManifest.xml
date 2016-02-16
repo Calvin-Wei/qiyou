@@ -167,6 +167,10 @@
             android:name=".stepview.Team_Step_Activity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".ui.view.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
 
         <service android:name="com.admob.zkapp.covers.ViewService" />
     </application>
