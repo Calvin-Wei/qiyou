@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import com.qiyou.R;
 import com.qiyou.MyView.SpotPopWindow;
 import com.qiyou.MyView.SpotPopWindow.OnItemClickListener;
+import com.qiyou.adapter.Adapter_ListView_Hotel;
+import com.qiyou.adapter.Adapter_ListView_Team;
 import com.qiyou.custom.ScaleView.HackyViewPager;
 import com.qiyou.ui.view.BuynowActivity;
 
@@ -18,6 +20,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -28,6 +32,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 /**
@@ -51,6 +56,8 @@ public class Hotel_Activity extends Activity implements OnItemClickListener,
 	private static boolean isCollection = false;
 	private int position = 0;
 
+	private ListView listView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,6 +78,12 @@ public class Hotel_Activity extends Activity implements OnItemClickListener,
 		if (nfcAdapter == null) {
 			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
+
+		listView = (ListView) findViewById(R.id.hotel_listView_Detail);
+		listView.setFocusable(false);
+		listView.setSelector(new ColorDrawable(Color.TRANSPARENT));
+		listView.setAdapter(new Adapter_ListView_Hotel(this));
+
 		((ImageView) findViewById(R.id.hotel_iv_back)).setOnClickListener(this);
 		((ImageView) findViewById(R.id.hotel_put_in)).setOnClickListener(this);
 		buy_now = (ImageView) findViewById(R.id.hotel_buy_now);
@@ -190,8 +203,8 @@ public class Hotel_Activity extends Activity implements OnItemClickListener,
 			Intent intent = new Intent(Hotel_Activity.this, BuyNowHotel.class);
 			startActivity(intent);
 			isClickBuy = true;
-//			setBackgroundBlack(all_choice_layout, 0);
-//			popWindow.showAsDropDown(v);
+			// setBackgroundBlack(all_choice_layout, 0);
+			// popWindow.showAsDropDown(v);
 			break;
 		}
 	}

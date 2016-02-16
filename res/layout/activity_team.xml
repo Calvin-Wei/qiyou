@@ -134,6 +134,34 @@
         </LinearLayout>
     </ScrollView>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF" >
+
+        <Button
+            android:id="@+id/join_team"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/join_team"
+            android:background="@drawable/button_style"
+            android:text="参加团队"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/team_step"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/join_team"
+            android:background="@drawable/button_style"
+            android:text="查看团队目前旅游进度"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/team_all_choice_layout"
         android:layout_width="match_parent"
@@ -142,18 +170,5 @@
         android:orientation="horizontal"
         android:visibility="gone" >
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/join_team"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="32dp"
-        android:background="@color/bg_light_blue"
-        android:text="参加团队"
-        android:textColor="@color/orange"
-        android:textSize="25sp" />
 
 </RelativeLayout>

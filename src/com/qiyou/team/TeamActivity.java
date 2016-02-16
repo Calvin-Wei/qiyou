@@ -6,14 +6,21 @@ package com.qiyou.team;
 import java.util.ArrayList;
 
 import com.qiyou.R;
+import com.qiyou.adapter.Adapter_ListView_Team;
+import com.qiyou.adapter.Adapter_ListView_detail;
 import com.qiyou.custom.ScaleView.HackyViewPager;
+import com.qiyou.stepview.Team_Step_Activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -22,8 +29,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +57,8 @@ public class TeamActivity extends Activity implements OnClickListener {
 	private static boolean isCollection = false;
 	private int position = 0;
 
+	private ListView listView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -65,11 +77,22 @@ public class TeamActivity extends Activity implements OnClickListener {
 		if (nfcAdapter == null) {
 			Toast.makeText(this, "您的手机不支持NFC", Toast.LENGTH_SHORT).show();
 		}
+
+		listView = (ListView) findViewById(R.id.team_listView_Detail);
+		listView.setFocusable(false);
+		listView.setSelector(new ColorDrawable(Color.TRANSPARENT));
+		listView.setAdapter(new Adapter_ListView_Team(this));
+
 		((ImageView) findViewById(R.id.team_iv_back)).setOnClickListener(this);
 		iv_spot_collection = (ImageView) findViewById(R.id.team_collection);
 		iv_spot_collection.setOnClickListener(this);
-		TextView join = (TextView) findViewById(R.id.join_team);
+
+		Button join = (Button) findViewById(R.id.join_team);
 		join.setOnClickListener(this);
+
+		Button step = (Button) findViewById(R.id.team_step);
+		step.setOnClickListener(this);
+
 		all_choice_layout = (LinearLayout) findViewById(R.id.team_all_choice_layout);
 		initViewPager();
 		// 如果当前景点已经收藏，显示收藏后的效果
@@ -78,10 +101,6 @@ public class TeamActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	/**
-			 * 
-			 */
-	@SuppressWarnings("deprecation")
 	private void initViewPager() {
 		if (allListView != null) {
 			allListView.clear();
@@ -180,6 +199,11 @@ public class TeamActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.join_team:
 			Toast.makeText(getApplicationContext(), "参加团队成功", 1000).show();
+			break;
+		case R.id.team_step:
+			Intent intent = new Intent(getApplicationContext(),
+					Team_Step_Activity.class);
+			startActivity(intent);
 			break;
 		}
 	}

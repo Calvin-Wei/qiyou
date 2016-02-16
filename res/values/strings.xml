@@ -78,5 +78,9 @@
 
 
 旅行，看上去是个愉快的开始~</string>
+    <string name="str_orange">#fe7b27</string>
+    <string name="basic_action_1">删除</string>
+    <string name="basic_action_2">Action_2</string>
+    <string name="basic_del">Delete</string>
 
 </resources>
