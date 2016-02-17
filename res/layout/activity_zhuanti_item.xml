@@ -42,7 +42,7 @@
                 android:layout_below="@+id/user_name"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/user_circleImageView"
-                android:text="2014-9-15"
+                android:text="2016-1-15"
                 android:textColor="#5c5c5c"
                 android:textSize="12sp" />
 

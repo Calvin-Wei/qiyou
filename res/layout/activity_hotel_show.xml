@@ -121,7 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="@string/spot_evaluate"
+                android:text="酒店评价"
                 android:textColor="@color/tv_Black"
                 android:textSize="18dp" />
 
