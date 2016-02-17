@@ -10,7 +10,7 @@
         style="@style/top_text_style"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="背景故宫门票" />
+        android:text="北京故宫门票" />
 
     <ScrollView
         android:id="@+id/scrollView"

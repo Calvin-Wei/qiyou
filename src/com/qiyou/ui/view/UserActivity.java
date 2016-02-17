@@ -38,7 +38,6 @@ public class UserActivity extends Activity implements OnClickListener {
 	private LinearLayout ll_user_jingdian;// 景点优惠券
 	private LinearLayout ll_user_members;// 我的成员
 	private LinearLayout ll_user_hotel;// 酒店优惠券
-	private LinearLayout ll_user_opinion;// 关于我们
 	private LinearLayout my_team_manage;// 我的团队管理
 	private LinearLayout my_ticket;// 我的门票
 	private LinearLayout my_wuliu;// 我的物流
@@ -59,7 +58,6 @@ public class UserActivity extends Activity implements OnClickListener {
 		ll_user_jingdian = (LinearLayout) findViewById(R.id.ll_user_jingdian);
 		ll_user_members = (LinearLayout) findViewById(R.id.ll_user_members);
 		ll_user_hotel = (LinearLayout) findViewById(R.id.ll_user_hotel);
-		ll_user_opinion = (LinearLayout) findViewById(R.id.ll_user_opinion);
 		my_team_manage = (LinearLayout) findViewById(R.id.my_team_manage);
 		my_ticket = (LinearLayout) findViewById(R.id.my_ticket);
 		my_wuliu = (LinearLayout) findViewById(R.id.my_wuliu);
@@ -67,7 +65,6 @@ public class UserActivity extends Activity implements OnClickListener {
 		ll_user_jingdian.setOnClickListener(this);
 		ll_user_members.setOnClickListener(this);
 		ll_user_hotel.setOnClickListener(this);
-		ll_user_opinion.setOnClickListener(this);
 		my_team_manage.setOnClickListener(this);
 		my_ticket.setOnClickListener(this);
 		my_wuliu.setOnClickListener(this);
